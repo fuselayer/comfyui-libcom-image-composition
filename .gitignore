@@ -1,0 +1,16 @@
+# Python cache files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Specific files to exclude
+readme.md
+libcom-tree.txt
+gemini.md
+lastconvo.txt
+test_harmony_scorer.py
+TESTING_GUIDE.md
+
+# HuggingFace cache (actual models kept)
+.locks/
+models--BCMIZB--Libcom_pretrained_models/
