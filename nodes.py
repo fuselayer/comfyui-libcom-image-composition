@@ -107,6 +107,13 @@ class ImageHarmonizationNode:
                 "composite_image": ("IMAGE",),
                 "mask": ("MASK",),
                 "model_variant": (ModelRegistry.get_all_models(),),
+            },
+            "optional": {
+                # Always visible; ignored for non-PCTNet models
+                "pctnet_strength": ("FLOAT", {"default": 1.0, "min": 0.0, "max": 2.0, "step": 0.05}),
+                "pctnet_blend_mode": (["upstream", "mask", "attention"], {"default": "upstream"}),
+                # Keep max_resolution visible here too
+                "max_resolution": ("INT", {"default": 1024, "min": 256, "max": 4096, "step": 256}),
             }
         }
     
@@ -116,68 +123,50 @@ class ImageHarmonizationNode:
     CATEGORY = "image/harmonization"
     
     def load_model(self, model_name):
-        # ... existing check ...
-        
         # Get model config from registry
         config = ModelRegistry.get_config(model_name)
         model_type = config.type
-        
-        # Construct checkpoint path
-        checkpoints_dir = os.path.join(folder_paths.models_dir, "harmonization")
+
+        # Checkpoints live ONLY in this node's ./checkpoints
+        node_root = os.path.dirname(os.path.abspath(__file__))
+        checkpoints_dir = os.path.join(node_root, "checkpoints")
         checkpoint_path = os.path.join(checkpoints_dir, config.checkpoint)
-        
+
         if not os.path.exists(checkpoint_path):
             raise FileNotFoundError(
                 f"Checkpoint not found: {checkpoint_path}\n"
-                f"Please download the model and place it in: {checkpoints_dir}"
+                f"Expected all harmonization weights in: {checkpoints_dir}"
             )
-        
+
         # Load model based on type
         if model_type == "cdtnet":
             from .model.cdtnet import create_cdtnet
-            
             self.model = create_cdtnet(
                 model_name=model_name,
                 checkpoint_path=checkpoint_path
             )
-        
-        elif model_type == "issam":  # ADD THIS
+
+        elif model_type == "issam":
             from .model.issam import create_issam
-            
-            self.model = create_issam(
-                checkpoint_path=checkpoint_path
-            )
+            self.model = create_issam(checkpoint_path=checkpoint_path)
 
         elif model_type == "pctnet":
             from .model.pctnet import create_pctnet
+            self.model = create_pctnet(checkpoint_path=checkpoint_path)
 
-            self.model = create_pctnet(
-                checkpoint_path=checkpoint_path
-            )
-            
         elif model_type == "harmonizer":
             from .model.harmonizer import create_harmonizer
-            
-            self.model = create_harmonizer(
-                model_type='standard',
-                checkpoint_path=checkpoint_path
-            )
-            
+            self.model = create_harmonizer(model_type='standard', checkpoint_path=checkpoint_path)
+
         elif model_type == "enhancer":
             from .model.harmonizer import create_harmonizer
-            
-            self.model = create_harmonizer(
-                model_type='enhancer',
-                checkpoint_path=checkpoint_path
-            )
-        
+            self.model = create_harmonizer(model_type='enhancer', checkpoint_path=checkpoint_path)
+
         else:
             raise ValueError(f"Unknown model type: {model_type}")
-    
-        # ADD THESE LINES:
+
         self.model = self.model.to(self.device)
         self.model.eval()
-        
         self.current_model_name = model_name
         return self.model
     
@@ -279,7 +268,7 @@ class ImageHarmonizationNode:
         
         return comp_img_resized, mask_resized, original_size
     
-    def harmonize(self, composite_image, mask, model_variant, max_resolution=1024):
+    def harmonize(self, composite_image, mask, model_variant, max_resolution=1024, pctnet_strength=1.0, pctnet_blend_mode="upstream"):
         """
         Main harmonization function
         
@@ -324,8 +313,10 @@ class ImageHarmonizationNode:
                 output = model(model_input)
 
             elif config.type == "pctnet":
-                # PCTNet forward pass
-                output = model(comp_img_proc, comp_img, mask_proc, mask_tensor)
+                result = model(comp_img_proc, mask_proc,
+                               strength=pctnet_strength,
+                               blend_mode=pctnet_blend_mode)
+                output = result['images'] if isinstance(result, dict) and 'images' in result else result
                 
             elif config.type == "enhancer":  # CHANGED: was checking "harmonizer" again
                 # Enhancer forward pass
@@ -369,12 +360,7 @@ class ImageHarmonizationAuto:
             },
             "optional": {
                 "prefer_quality": ("BOOLEAN", {"default": True}),
-                "max_resolution": ("INT", {
-                    "default": 1024,
-                    "min": 256,
-                    "max": 4096,
-                    "step": 256
-                }),
+                "max_resolution": ("INT", {"default": 1024, "min": 256, "max": 4096, "step": 256}),
             }
         }
     
@@ -425,3 +411,5 @@ NODE_DISPLAY_NAME_MAPPINGS = {
     "ImageHarmonizationAuto": "Image Harmonization (Auto)",
     "HarmonyScore": "Harmony Score Evaluation"
 }
+
+

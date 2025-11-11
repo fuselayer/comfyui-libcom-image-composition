@@ -1,6 +1,6 @@
 """
 ComfyUI Image Harmonization Custom Node
-Multi-model support for CDTNet and Harmonizer
+Multi-model support for CDTNet, PCTNet, and Harmonizer
 """
 
 from .nodes import NODE_CLASS_MAPPINGS, NODE_DISPLAY_NAME_MAPPINGS
@@ -18,3 +18,5 @@ print("  - CDTNet_iHarmony4_256 (256x256, with refinement)")
 print("  - CDTNet_HAdobe5k_2048 (2048x2048, with refinement)")
 print("  - CDTNet_sim_base256 (256x256, simplified/fast)")
 print("  - Harmonizer_iHarmony4 (256x256, EfficientNet-based)")
+print("  - PCTNet_CNN (256x256, RakutenTech CNN)")
+print("  - PCTNet_ViT (256x256, RakutenTech ViT)")

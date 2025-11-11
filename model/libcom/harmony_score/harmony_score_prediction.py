@@ -21,29 +21,6 @@ class HarmonyScoreModel:
         device (str | torch.device): gpu id
         model_type (str): predefined model type.
         kwargs (dict): other parameters for building model
-    
-    Examples:
-        >>> from libcom import HarmonyScoreModel
-        >>> from libcom.utils.process_image import make_image_grid
-        >>> import cv2
-        >>> net = HarmonyScoreModel(device=0, model_type='BargainNet')
-        >>> test_dir   = '../tests/harmony_score_prediction/'
-        >>> img_names  = ['vaulted-cellar-247391_inharm.jpg', 'ameland-5651866_harm.jpg']
-        >>> vis_list,scores = [], []
-        >>> for img_name in img_names:
-        >>>     comp_img  = test_dir + 'composite/' + img_name
-        >>>     comp_mask = test_dir + 'composite_mask/' + img_name
-        >>>     score     = net(comp_img, comp_mask)
-        >>>     vis_list += [comp_img, comp_mask]
-        >>>     scores.append(score)
-        >>> grid_img  = make_image_grid(vis_list, text_list=[f'harmony_score:{scores[0]:.2f}', 'composite-mask', f'harmony_score:{scores[1]:.2f}', 'composite-mask'])
-        >>> cv2.imwrite('../docs/_static/image/harmonyscore_result1.jpg', grid_img)
- 
-    Expected result:
-
-    .. image:: _static/image/harmonyscore_result1.jpg
-        :scale: 38 %
-
     """
     def __init__(self, device=0, model_type='BargainNet', **kwargs):
         assert model_type in model_set, f'Not implementation for {model_type}'
@@ -57,7 +34,12 @@ class HarmonyScoreModel:
 
     def build_pretrained_model(self, weight_path):
         model = StyleEncoder(style_dim=16)
-        model.load_state_dict(torch.load(weight_path, map_location='cpu', weights_only=True))
+        # Backward-compat: some torch versions don't support weights_only
+        try:
+            state = torch.load(weight_path, map_location='cpu', weights_only=True)
+        except TypeError:
+            state = torch.load(weight_path, map_location='cpu')
+        model.load_state_dict(state)
         self.model = model.to(self.device).eval()
         
     def build_data_transformer(self):
@@ -103,14 +85,6 @@ class HarmonyScoreModel:
     def __call__(self, composite_image, composite_mask):
         """
         Predicting the compatibility score between background and foreground in the given composite image.
-
-        Args:
-            composite_image (str | numpy.ndarray): The path to composite image or the compposite image in ndarray form.
-            composite_mask (str | numpy.ndarray): Mask of composite image which indicates the foreground object region in the composite image.
-        
-        Returns:
-            harmony_score (float): Predicted harmony score within [0,1] between background region and foreground region of the given composite image. Larger harmony score implies more harmonious composite image.
-
         """
         im, bg_mask, fg_mask = self.inputs_preprocess(composite_image, composite_mask)
         bg_style = self.model(im, bg_mask)

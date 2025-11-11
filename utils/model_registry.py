@@ -10,7 +10,7 @@ from typing import Dict, Optional, List
 class ModelConfig:
     """Configuration for a harmonization model"""
     name: str
-    type: str  # 'cdtnet', 'issam', 'harmonizer', 'enhancer'
+    type: str  # 'cdtnet', 'issam', 'harmonizer', 'enhancer', 'pctnet'
     checkpoint: str
     resolution: int
     has_refine: bool = False
@@ -81,12 +81,21 @@ class ModelRegistry:
             speed="fast",
             quality="good"
         ),
-        "PCTNet": ModelConfig(
-            name="PCTNet",
+        "PCTNet_CNN": ModelConfig(
+            name="PCTNet_CNN",
             type="pctnet",
-            checkpoint="PCTNet.pth",
+            checkpoint="PCTNet_CNN.pth",
             resolution=256,
-            description="PCTNet harmonization model",
+            description="PCTNet (CNN variant) from RakutenTech",
+            speed="medium",
+            quality="better"
+        ),
+        "PCTNet_ViT": ModelConfig(
+            name="PCTNet_ViT",
+            type="pctnet",
+            checkpoint="PCTNet_ViT.pth",
+            resolution=256,
+            description="PCTNet (ViT variant) from RakutenTech",
             speed="medium",
             quality="better"
         ),

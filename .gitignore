@@ -1,16 +1,32 @@
-# Python cache files
+# Python cache
 __pycache__/
 *.py[cod]
 *$py.class
 
-# Specific files to exclude
-readme.md
+# Virtual env / tools
+.env
+.venv/
+venv/
+env/
+
+# OS junk
+.DS_Store
+Thumbs.db
+
+
+# HuggingFace cache (actual models kept elsewhere)
+model/libcom/harmony_score/pretrained_models/.locks/
+model/libcom/harmony_score/pretrained_models/models--BCMIZB--Libcom_pretrained_models/
+
+# Dev scratch notes
 libcom-tree.txt
 gemini.md
 lastconvo.txt
+fornow.txt
+*CSDH
+comfyui-libcom-image-composition.txt
+
+# Tests (optional to ignore; you asked to ignore the local scorer tests)
 test_harmony_scorer.py
 TESTING_GUIDE.md
 
-# HuggingFace cache (actual models kept)
-.locks/
-models--BCMIZB--Libcom_pretrained_models/

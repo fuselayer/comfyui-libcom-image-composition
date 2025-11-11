@@ -1,0 +1,5870 @@
+{
+  "id": "498dc9d1-f893-4755-992c-a87de2bc08ff",
+  "revision": 0,
+  "last_node_id": 198,
+  "last_link_id": 383,
+  "nodes": [
+    {
+      "id": 5,
+      "type": "MaskToImage",
+      "pos": [
+        7289.28759765625,
+        4969.80517578125
+      ],
+      "size": [
+        184.79998779296875,
+        26
+      ],
+      "flags": {},
+      "order": 9,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "mask",
+          "type": "MASK",
+          "link": 4
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            8
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.62",
+        "Node name for S&R": "MaskToImage",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.1",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 6,
+      "type": "InvertMask",
+      "pos": [
+        6995.08056640625,
+        4985.2177734375
+      ],
+      "size": [
+        140,
+        26
+      ],
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "mask",
+          "type": "MASK",
+          "link": 75
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": [
+            4,
+            90,
+            93,
+            96,
+            99,
+            108,
+            114,
+            124,
+            140,
+            147,
+            151,
+            155,
+            165,
+            174,
+            196,
+            250,
+            278,
+            280,
+            293,
+            308,
+            319,
+            347,
+            362,
+            367,
+            370,
+            375,
+            378,
+            383
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.62",
+        "Node name for S&R": "InvertMask",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.1",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 7,
+      "type": "LoadImage",
+      "pos": [
+        6662.17041015625,
+        4244.22998046875
+      ],
+      "size": [
+        274,
+        314.000244140625
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            61,
+            89,
+            92,
+            95,
+            98,
+            107,
+            118,
+            123,
+            139,
+            146,
+            150,
+            154,
+            164,
+            173,
+            195,
+            205,
+            215,
+            223,
+            225,
+            227,
+            229,
+            242,
+            249,
+            277,
+            279,
+            282,
+            292,
+            297,
+            307,
+            320,
+            346,
+            364,
+            366,
+            372,
+            374,
+            380,
+            382
+          ]
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.62",
+        "Node name for S&R": "LoadImage",
+        "ue_properties": {
+          "widget_ue_connectable": {
+            "image": true,
+            "upload": true
+          },
+          "version": "7.1",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "unharmonized-composite.png",
+        "image"
+      ]
+    },
+    {
+      "id": 8,
+      "type": "LoadImage",
+      "pos": [
+        6644.97119140625,
+        4697.43310546875
+      ],
+      "size": [
+        274,
+        314
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            69
+          ]
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": [
+            75
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.62",
+        "Node name for S&R": "LoadImage",
+        "ue_properties": {
+          "widget_ue_connectable": {
+            "image": true,
+            "upload": true
+          },
+          "version": "7.1",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "foreground.png",
+        "image"
+      ]
+    },
+    {
+      "id": 9,
+      "type": "PreviewImage",
+      "pos": [
+        7010.93505859375,
+        5115.7783203125
+      ],
+      "size": [
+        210,
+        258
+      ],
+      "flags": {},
+      "order": 25,
+      "mode": 4,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 8
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.62",
+        "Node name for S&R": "PreviewImage",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.1",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 10,
+      "type": "Image Comparer (rgthree)",
+      "pos": [
+        9908.98828125,
+        4139.68505859375
+      ],
+      "size": [
+        453.2561950683594,
+        297.40679931640625
+      ],
+      "flags": {},
+      "order": 34,
+      "mode": 0,
+      "inputs": [
+        {
+          "dir": 3,
+          "name": "image_a",
+          "type": "IMAGE",
+          "link": 236
+        },
+        {
+          "dir": 3,
+          "name": "image_b",
+          "type": "IMAGE",
+          "link": 237
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "rgthree-comfy",
+        "ver": "1.0.2506081210",
+        "comparer_mode": "Slide",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.1",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        [
+          {
+            "name": "A",
+            "selected": true,
+            "url": "/api/view?filename=rgthree.compare._temp_rixsn_00001_.png&type=temp&subfolder=&rand=0.5070363171214995"
+          },
+          {
+            "name": "B",
+            "selected": true,
+            "url": "/api/view?filename=rgthree.compare._temp_rixsn_00002_.png&type=temp&subfolder=&rand=0.9718533198642695"
+          }
+        ]
+      ]
+    },
+    {
+      "id": 33,
+      "type": "PreviewImage",
+      "pos": [
+        8339.8984375,
+        5090.83740234375
+      ],
+      "size": [
+        491.7850646972656,
+        332.18408203125
+      ],
+      "flags": {},
+      "order": 59,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 266
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.62",
+        "Node name for S&R": "PreviewImage",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.1",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 36,
+      "type": "ImageHarmonization",
+      "pos": [
+        7551.15380859375,
+        4950.0595703125
+      ],
+      "size": [
+        317.79998779296875,
+        150
+      ],
+      "flags": {},
+      "order": 15,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "composite_image",
+          "type": "IMAGE",
+          "link": 61
+        },
+        {
+          "name": "mask",
+          "type": "MASK",
+          "link": 114
+        }
+      ],
+      "outputs": [
+        {
+          "name": "harmonized_image",
+          "type": "IMAGE",
+          "links": [
+            161,
+            168,
+            220,
+            233,
+            239,
+            240
+          ]
+        }
+      ],
+      "properties": {
+        "aux_id": "fuselayer/comfyui-libcom-image-composition",
+        "ver": "a8b4b8150cf7dba08a38eb3c3defadc2c3c620fb",
+        "Node name for S&R": "ImageHarmonization",
+        "ue_properties": {
+          "widget_ue_connectable": {
+            "model_variant": true,
+            "max_resolution": true
+          },
+          "version": "7.1",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "Enhancer",
+        1,
+        "upstream",
+        1024
+      ]
+    },
+    {
+      "id": 37,
+      "type": "ImageToMask",
+      "pos": [
+        7035.19287109375,
+        4704.6962890625
+      ],
+      "size": [
+        270,
+        58
+      ],
+      "flags": {},
+      "order": 6,
+      "mode": 4,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 69
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": [
+            73
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.62",
+        "Node name for S&R": "ImageToMask",
+        "ue_properties": {
+          "widget_ue_connectable": {
+            "channel": true
+          },
+          "version": "7.1",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "alpha"
+      ]
+    },
+    {
+      "id": 39,
+      "type": "MaskToImage",
+      "pos": [
+        7057.6845703125,
+        4835.09619140625
+      ],
+      "size": [
+        184.79998779296875,
+        26
+      ],
+      "flags": {},
+      "order": 8,
+      "mode": 4,
+      "inputs": [
+        {
+          "name": "mask",
+          "type": "MASK",
+          "link": 73
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            269
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.62",
+        "Node name for S&R": "MaskToImage",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.1",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 45,
+      "type": "PreviewImage",
+      "pos": [
+        8339.8984375,
+        4333.84814453125
+      ],
+      "size": [
+        482.1005859375,
+        338.0887145996094
+      ],
+      "flags": {},
+      "order": 26,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 88
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.62",
+        "Node name for S&R": "PreviewImage",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.1",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 46,
+      "type": "ImageHarmonization",
+      "pos": [
+        7551.15380859375,
+        4470.998046875
+      ],
+      "size": [
+        317.79998779296875,
+        150
+      ],
+      "flags": {},
+      "order": 10,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "composite_image",
+          "type": "IMAGE",
+          "link": 89
+        },
+        {
+          "name": "mask",
+          "type": "MASK",
+          "link": 90
+        }
+      ],
+      "outputs": [
+        {
+          "name": "harmonized_image",
+          "type": "IMAGE",
+          "links": [
+            88,
+            160,
+            219,
+            232,
+            237,
+            238
+          ]
+        }
+      ],
+      "properties": {
+        "aux_id": "fuselayer/comfyui-libcom-image-composition",
+        "ver": "a8b4b8150cf7dba08a38eb3c3defadc2c3c620fb",
+        "Node name for S&R": "ImageHarmonization",
+        "ue_properties": {
+          "widget_ue_connectable": {
+            "model_variant": true,
+            "max_resolution": true
+          },
+          "version": "7.1",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "Harmonizer",
+        1,
+        "upstream",
+        1024
+      ]
+    },
+    {
+      "id": 47,
+      "type": "PreviewImage",
+      "pos": [
+        8328.7275390625,
+        3987.823974609375
+      ],
+      "size": [
+        494.79229736328125,
+        297.92608642578125
+      ],
+      "flags": {},
+      "order": 30,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 91
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.62",
+        "Node name for S&R": "PreviewImage",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.1",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 48,
+      "type": "ImageHarmonization",
+      "pos": [
+        7551.15380859375,
+        4164.6494140625
+      ],
+      "size": [
+        317.79998779296875,
+        150
+      ],
+      "flags": {},
+      "order": 11,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "composite_image",
+          "type": "IMAGE",
+          "link": 92
+        },
+        {
+          "name": "mask",
+          "type": "MASK",
+          "link": 93
+        }
+      ],
+      "outputs": [
+        {
+          "name": "harmonized_image",
+          "type": "IMAGE",
+          "links": [
+            91,
+            105,
+            159,
+            218,
+            231,
+            236
+          ]
+        }
+      ],
+      "properties": {
+        "aux_id": "fuselayer/comfyui-libcom-image-composition",
+        "ver": "a8b4b8150cf7dba08a38eb3c3defadc2c3c620fb",
+        "Node name for S&R": "ImageHarmonization",
+        "ue_properties": {
+          "widget_ue_connectable": {
+            "model_variant": true,
+            "max_resolution": true
+          },
+          "version": "7.1",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "CDTNet_sim_base256",
+        1,
+        "upstream",
+        1024
+      ]
+    },
+    {
+      "id": 49,
+      "type": "PreviewImage",
+      "pos": [
+        8339.8984375,
+        3632.083740234375
+      ],
+      "size": [
+        480.0791931152344,
+        316.76025390625
+      ],
+      "flags": {},
+      "order": 35,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 94
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.62",
+        "Node name for S&R": "PreviewImage",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.1",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 50,
+      "type": "ImageHarmonization",
+      "pos": [
+        7551.15380859375,
+        3857.754638671875
+      ],
+      "size": [
+        317.79998779296875,
+        150
+      ],
+      "flags": {},
+      "order": 12,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "composite_image",
+          "type": "IMAGE",
+          "link": 95
+        },
+        {
+          "name": "mask",
+          "type": "MASK",
+          "link": 96
+        }
+      ],
+      "outputs": [
+        {
+          "name": "harmonized_image",
+          "type": "IMAGE",
+          "links": [
+            94,
+            101,
+            104,
+            175,
+            214,
+            217,
+            286,
+            300
+          ]
+        }
+      ],
+      "properties": {
+        "aux_id": "fuselayer/comfyui-libcom-image-composition",
+        "ver": "a8b4b8150cf7dba08a38eb3c3defadc2c3c620fb",
+        "Node name for S&R": "ImageHarmonization",
+        "ue_properties": {
+          "widget_ue_connectable": {
+            "model_variant": true,
+            "max_resolution": true
+          },
+          "version": "7.1",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "CDTNet_HAdobe5k_2048",
+        1,
+        "upstream",
+        1024
+      ]
+    },
+    {
+      "id": 51,
+      "type": "PreviewImage",
+      "pos": [
+        8339.8984375,
+        3229.760009765625
+      ],
+      "size": [
+        482.1646423339844,
+        349.5380859375
+      ],
+      "flags": {},
+      "order": 40,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 97
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.62",
+        "Node name for S&R": "PreviewImage",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.1",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 52,
+      "type": "ImageHarmonization",
+      "pos": [
+        7551.15380859375,
+        3501.4189453125
+      ],
+      "size": [
+        317.79998779296875,
+        150
+      ],
+      "flags": {},
+      "order": 13,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "composite_image",
+          "type": "IMAGE",
+          "link": 98
+        },
+        {
+          "name": "mask",
+          "type": "MASK",
+          "link": 99
+        }
+      ],
+      "outputs": [
+        {
+          "name": "harmonized_image",
+          "type": "IMAGE",
+          "links": [
+            97,
+            100,
+            117,
+            138,
+            216
+          ]
+        }
+      ],
+      "properties": {
+        "aux_id": "fuselayer/comfyui-libcom-image-composition",
+        "ver": "a8b4b8150cf7dba08a38eb3c3defadc2c3c620fb",
+        "Node name for S&R": "ImageHarmonization",
+        "ue_properties": {
+          "widget_ue_connectable": {
+            "model_variant": true,
+            "max_resolution": true
+          },
+          "version": "7.1",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "CDTNet_iHarmony4_256",
+        1,
+        "upstream",
+        1024
+      ]
+    },
+    {
+      "id": 53,
+      "type": "Image Comparer (rgthree)",
+      "pos": [
+        9908.98828125,
+        3289.682861328125
+      ],
+      "size": [
+        454.1659851074219,
+        318.89483642578125
+      ],
+      "flags": {},
+      "order": 41,
+      "mode": 0,
+      "inputs": [
+        {
+          "dir": 3,
+          "name": "image_a",
+          "type": "IMAGE",
+          "link": 100
+        },
+        {
+          "dir": 3,
+          "name": "image_b",
+          "type": "IMAGE",
+          "link": 101
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "rgthree-comfy",
+        "ver": "1.0.2506081210",
+        "comparer_mode": "Slide",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.1",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        [
+          {
+            "name": "A",
+            "selected": true,
+            "url": "/api/view?filename=rgthree.compare._temp_iehxr_00001_.png&type=temp&subfolder=&rand=0.05630349193616924"
+          },
+          {
+            "name": "B",
+            "selected": true,
+            "url": "/api/view?filename=rgthree.compare._temp_iehxr_00002_.png&type=temp&subfolder=&rand=0.48945940564111634"
+          }
+        ]
+      ]
+    },
+    {
+      "id": 54,
+      "type": "Image Comparer (rgthree)",
+      "pos": [
+        9908.98828125,
+        3699.68310546875
+      ],
+      "size": [
+        453.56402587890625,
+        359.0747375488281
+      ],
+      "flags": {},
+      "order": 36,
+      "mode": 0,
+      "inputs": [
+        {
+          "dir": 3,
+          "name": "image_a",
+          "type": "IMAGE",
+          "link": 104
+        },
+        {
+          "dir": 3,
+          "name": "image_b",
+          "type": "IMAGE",
+          "link": 105
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "rgthree-comfy",
+        "ver": "1.0.2506081210",
+        "comparer_mode": "Slide",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.1",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        [
+          {
+            "name": "A",
+            "selected": true,
+            "url": "/api/view?filename=rgthree.compare._temp_qpcyb_00001_.png&type=temp&subfolder=&rand=0.3677183163959459"
+          },
+          {
+            "name": "B",
+            "selected": true,
+            "url": "/api/view?filename=rgthree.compare._temp_qpcyb_00002_.png&type=temp&subfolder=&rand=0.9185167344776726"
+          }
+        ]
+      ]
+    },
+    {
+      "id": 55,
+      "type": "ImageHarmonizationAuto",
+      "pos": [
+        7551.15380859375,
+        5535.86328125
+      ],
+      "size": [
+        301.07000732421875,
+        150
+      ],
+      "flags": {},
+      "order": 14,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "composite_image",
+          "type": "IMAGE",
+          "link": 107
+        },
+        {
+          "name": "mask",
+          "type": "MASK",
+          "link": 108
+        }
+      ],
+      "outputs": [
+        {
+          "name": "harmonized_image",
+          "type": "IMAGE",
+          "links": [
+            235,
+            244,
+            248,
+            261,
+            268
+          ]
+        }
+      ],
+      "properties": {
+        "aux_id": "fuselayer/comfyui-libcom-image-composition",
+        "ver": "a8b4b8150cf7dba08a38eb3c3defadc2c3c620fb",
+        "Node name for S&R": "ImageHarmonizationAuto",
+        "ue_properties": {
+          "widget_ue_connectable": {
+            "prefer_quality": true,
+            "max_resolution": true
+          },
+          "version": "7.1",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        true,
+        1024,
+        "upstream",
+        1024
+      ]
+    },
+    {
+      "id": 57,
+      "type": "Image Comparer (rgthree)",
+      "pos": [
+        9908.98828125,
+        4889.68505859375
+      ],
+      "size": [
+        457.59698486328125,
+        373.8297424316406
+      ],
+      "flags": {},
+      "order": 57,
+      "mode": 0,
+      "inputs": [
+        {
+          "dir": 3,
+          "name": "image_a",
+          "type": "IMAGE",
+          "link": 240
+        },
+        {
+          "dir": 3,
+          "name": "image_b",
+          "type": "IMAGE",
+          "link": 241
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "rgthree-comfy",
+        "ver": "1.0.2506081210",
+        "comparer_mode": "Slide",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.1",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        [
+          {
+            "name": "A",
+            "selected": true,
+            "url": "/api/view?filename=rgthree.compare._temp_dcmdl_00001_.png&type=temp&subfolder=&rand=0.8084166923979095"
+          },
+          {
+            "name": "B",
+            "selected": true,
+            "url": "/api/view?filename=rgthree.compare._temp_dcmdl_00002_.png&type=temp&subfolder=&rand=0.8006694702673094"
+          }
+        ]
+      ]
+    },
+    {
+      "id": 58,
+      "type": "Image Comparer (rgthree)",
+      "pos": [
+        9470.0791015625,
+        3194.29736328125
+      ],
+      "size": [
+        393.5980529785156,
+        289.0325927734375
+      ],
+      "flags": {},
+      "order": 42,
+      "mode": 0,
+      "inputs": [
+        {
+          "dir": 3,
+          "name": "image_a",
+          "type": "IMAGE",
+          "link": 118
+        },
+        {
+          "dir": 3,
+          "name": "image_b",
+          "type": "IMAGE",
+          "link": 117
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "rgthree-comfy",
+        "ver": "1.0.2506081210",
+        "comparer_mode": "Slide",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.1",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        [
+          {
+            "name": "A",
+            "selected": true,
+            "url": "/api/view?filename=rgthree.compare._temp_lsgvc_00001_.png&type=temp&subfolder=&rand=0.47433063045260204"
+          },
+          {
+            "name": "B",
+            "selected": true,
+            "url": "/api/view?filename=rgthree.compare._temp_lsgvc_00002_.png&type=temp&subfolder=&rand=0.9280172508803197"
+          }
+        ]
+      ]
+    },
+    {
+      "id": 60,
+      "type": "ImageHarmonization",
+      "pos": [
+        7551.15380859375,
+        5296.05859375
+      ],
+      "size": [
+        317.79998779296875,
+        150
+      ],
+      "flags": {},
+      "order": 16,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "composite_image",
+          "type": "IMAGE",
+          "link": 123
+        },
+        {
+          "name": "mask",
+          "type": "MASK",
+          "link": 124
+        }
+      ],
+      "outputs": [
+        {
+          "name": "harmonized_image",
+          "type": "IMAGE",
+          "links": [
+            167,
+            221,
+            234,
+            241,
+            247,
+            266
+          ]
+        }
+      ],
+      "properties": {
+        "aux_id": "fuselayer/comfyui-libcom-image-composition",
+        "ver": "a8b4b8150cf7dba08a38eb3c3defadc2c3c620fb",
+        "Node name for S&R": "ImageHarmonization",
+        "ue_properties": {
+          "widget_ue_connectable": {
+            "model_variant": true,
+            "max_resolution": true
+          },
+          "version": "7.1",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "iSSAM_256",
+        1,
+        "upstream",
+        1024
+      ]
+    },
+    {
+      "id": 61,
+      "type": "PreviewImage",
+      "pos": [
+        8339.8984375,
+        5472.51513671875
+      ],
+      "size": [
+        472.4773254394531,
+        395.5917053222656
+      ],
+      "flags": {},
+      "order": 48,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 268
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.62",
+        "Node name for S&R": "PreviewImage",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.1",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 65,
+      "type": "Image Comparer (rgthree)",
+      "pos": [
+        9908.98828125,
+        4519.68505859375
+      ],
+      "size": [
+        462.3164978027344,
+        302.39801025390625
+      ],
+      "flags": {},
+      "order": 53,
+      "mode": 0,
+      "inputs": [
+        {
+          "dir": 3,
+          "name": "image_a",
+          "type": "IMAGE",
+          "link": 238
+        },
+        {
+          "dir": 3,
+          "name": "image_b",
+          "type": "IMAGE",
+          "link": 239
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "rgthree-comfy",
+        "ver": "1.0.2506081210",
+        "comparer_mode": "Slide",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.1",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        [
+          {
+            "name": "A",
+            "selected": true,
+            "url": "/api/view?filename=rgthree.compare._temp_csnba_00001_.png&type=temp&subfolder=&rand=0.4185388147475424"
+          },
+          {
+            "name": "B",
+            "selected": true,
+            "url": "/api/view?filename=rgthree.compare._temp_csnba_00002_.png&type=temp&subfolder=&rand=0.22541807116302492"
+          }
+        ]
+      ]
+    },
+    {
+      "id": 67,
+      "type": "HarmonyScore",
+      "pos": [
+        8855.232421875,
+        3416.00146484375
+      ],
+      "size": [
+        308.4477844238281,
+        150.72686767578125
+      ],
+      "flags": {},
+      "order": 43,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "composite_image",
+          "type": "IMAGE",
+          "link": 139
+        },
+        {
+          "name": "mask",
+          "type": "MASK",
+          "link": 140
+        },
+        {
+          "name": "harmonized_image",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 138
+        }
+      ],
+      "outputs": [
+        {
+          "name": "harmony_score",
+          "type": "FLOAT",
+          "links": [
+            141
+          ]
+        },
+        {
+          "name": "score_text",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "aux_id": "fuselayer/comfyui-libcom-image-composition",
+        "ver": "a8b4b8150cf7dba08a38eb3c3defadc2c3c620fb",
+        "Node name for S&R": "HarmonyScore",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.1",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        1,
+        "upstream"
+      ]
+    },
+    {
+      "id": 68,
+      "type": "Display Any (rgthree)",
+      "pos": [
+        9204.0126953125,
+        3426.00146484375
+      ],
+      "size": [
+        215.68540954589844,
+        135.06944274902344
+      ],
+      "flags": {},
+      "order": 86,
+      "mode": 0,
+      "inputs": [
+        {
+          "dir": 3,
+          "name": "source",
+          "type": "*",
+          "link": 141
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "rgthree-comfy",
+        "ver": "1.0.2506081210",
+        "Node name for S&R": "Display Any (rgthree)",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.1",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "0.31347382196607737"
+      ],
+      "bgcolor": "hsla(300, 100%, 50%, 1)"
+    },
+    {
+      "id": 71,
+      "type": "HarmonyScore",
+      "pos": [
+        8855.232421875,
+        4109.30029296875
+      ],
+      "size": [
+        308.4477844238281,
+        150.72686767578125
+      ],
+      "flags": {},
+      "order": 31,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "composite_image",
+          "type": "IMAGE",
+          "link": 146
+        },
+        {
+          "name": "mask",
+          "type": "MASK",
+          "link": 147
+        },
+        {
+          "name": "harmonized_image",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 159
+        }
+      ],
+      "outputs": [
+        {
+          "name": "harmony_score",
+          "type": "FLOAT",
+          "links": [
+            149
+          ]
+        },
+        {
+          "name": "score_text",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "aux_id": "fuselayer/comfyui-libcom-image-composition",
+        "ver": "a8b4b8150cf7dba08a38eb3c3defadc2c3c620fb",
+        "Node name for S&R": "HarmonyScore",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.1",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        1,
+        "upstream"
+      ]
+    },
+    {
+      "id": 72,
+      "type": "Display Any (rgthree)",
+      "pos": [
+        9204.0126953125,
+        4129.30029296875
+      ],
+      "size": [
+        215.68540954589844,
+        135.06944274902344
+      ],
+      "flags": {},
+      "order": 84,
+      "mode": 0,
+      "inputs": [
+        {
+          "dir": 3,
+          "name": "source",
+          "type": "*",
+          "link": 149
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "rgthree-comfy",
+        "ver": "1.0.2506081210",
+        "Node name for S&R": "Display Any (rgthree)",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.1",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "0.2932471803745889"
+      ],
+      "bgcolor": "hsla(300, 100%, 50%, 1)"
+    },
+    {
+      "id": 73,
+      "type": "HarmonyScore",
+      "pos": [
+        8855.232421875,
+        4522.10888671875
+      ],
+      "size": [
+        308.4477844238281,
+        150.72686767578125
+      ],
+      "flags": {},
+      "order": 27,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "composite_image",
+          "type": "IMAGE",
+          "link": 150
+        },
+        {
+          "name": "mask",
+          "type": "MASK",
+          "link": 151
+        },
+        {
+          "name": "harmonized_image",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 160
+        }
+      ],
+      "outputs": [
+        {
+          "name": "harmony_score",
+          "type": "FLOAT",
+          "links": [
+            153
+          ]
+        },
+        {
+          "name": "score_text",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "aux_id": "fuselayer/comfyui-libcom-image-composition",
+        "ver": "a8b4b8150cf7dba08a38eb3c3defadc2c3c620fb",
+        "Node name for S&R": "HarmonyScore",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.1",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        1,
+        "upstream"
+      ]
+    },
+    {
+      "id": 74,
+      "type": "Display Any (rgthree)",
+      "pos": [
+        9204.0126953125,
+        4532.10888671875
+      ],
+      "size": [
+        215.68540954589844,
+        135.06944274902344
+      ],
+      "flags": {},
+      "order": 83,
+      "mode": 0,
+      "inputs": [
+        {
+          "dir": 3,
+          "name": "source",
+          "type": "*",
+          "link": 153
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "rgthree-comfy",
+        "ver": "1.0.2506081210",
+        "Node name for S&R": "Display Any (rgthree)",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.1",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "0.21627937252653565"
+      ],
+      "bgcolor": "hsla(300, 100%, 50%, 1)"
+    },
+    {
+      "id": 75,
+      "type": "HarmonyScore",
+      "pos": [
+        8855.232421875,
+        4894.33642578125
+      ],
+      "size": [
+        308.4477844238281,
+        150.72686767578125
+      ],
+      "flags": {},
+      "order": 49,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "composite_image",
+          "type": "IMAGE",
+          "link": 154
+        },
+        {
+          "name": "mask",
+          "type": "MASK",
+          "link": 155
+        },
+        {
+          "name": "harmonized_image",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 161
+        }
+      ],
+      "outputs": [
+        {
+          "name": "harmony_score",
+          "type": "FLOAT",
+          "links": [
+            157
+          ]
+        },
+        {
+          "name": "score_text",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "aux_id": "fuselayer/comfyui-libcom-image-composition",
+        "ver": "a8b4b8150cf7dba08a38eb3c3defadc2c3c620fb",
+        "Node name for S&R": "HarmonyScore",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.1",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        1,
+        "upstream"
+      ]
+    },
+    {
+      "id": 76,
+      "type": "Display Any (rgthree)",
+      "pos": [
+        9204.0126953125,
+        4904.33642578125
+      ],
+      "size": [
+        215.68540954589844,
+        135.06944274902344
+      ],
+      "flags": {},
+      "order": 88,
+      "mode": 0,
+      "inputs": [
+        {
+          "dir": 3,
+          "name": "source",
+          "type": "*",
+          "link": 157
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "rgthree-comfy",
+        "ver": "1.0.2506081210",
+        "Node name for S&R": "Display Any (rgthree)",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.1",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "0.23648622334827105"
+      ],
+      "bgcolor": "hsla(300, 100%, 50%, 1)"
+    },
+    {
+      "id": 79,
+      "type": "Display Any (rgthree)",
+      "pos": [
+        9204.0126953125,
+        5282.17822265625
+      ],
+      "size": [
+        215.68540954589844,
+        135.06944274902344
+      ],
+      "flags": {},
+      "order": 89,
+      "mode": 0,
+      "inputs": [
+        {
+          "dir": 3,
+          "name": "source",
+          "type": "*",
+          "link": 163
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "rgthree-comfy",
+        "ver": "1.0.2506081210",
+        "Node name for S&R": "Display Any (rgthree)",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.1",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "0.2827607152181806"
+      ],
+      "bgcolor": "hsla(300, 100%, 50%, 1)"
+    },
+    {
+      "id": 80,
+      "type": "HarmonyScore",
+      "pos": [
+        8855.232421875,
+        5272.17822265625
+      ],
+      "size": [
+        308.4477844238281,
+        150.72686767578125
+      ],
+      "flags": {},
+      "order": 54,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "composite_image",
+          "type": "IMAGE",
+          "link": 164
+        },
+        {
+          "name": "mask",
+          "type": "MASK",
+          "link": 165
+        },
+        {
+          "name": "harmonized_image",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 167
+        }
+      ],
+      "outputs": [
+        {
+          "name": "harmony_score",
+          "type": "FLOAT",
+          "links": [
+            163
+          ]
+        },
+        {
+          "name": "score_text",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "aux_id": "fuselayer/comfyui-libcom-image-composition",
+        "ver": "a8b4b8150cf7dba08a38eb3c3defadc2c3c620fb",
+        "Node name for S&R": "HarmonyScore",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.1",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        1,
+        "upstream"
+      ]
+    },
+    {
+      "id": 81,
+      "type": "PreviewImage",
+      "pos": [
+        8339.8984375,
+        4720
+      ],
+      "size": [
+        488.0492248535156,
+        326.6733703613281
+      ],
+      "flags": {},
+      "order": 50,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 168
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.62",
+        "Node name for S&R": "PreviewImage",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.1",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 83,
+      "type": "Display Any (rgthree)",
+      "pos": [
+        9204.0126953125,
+        3787.140625
+      ],
+      "size": [
+        215.68540954589844,
+        135.06944274902344
+      ],
+      "flags": {},
+      "order": 85,
+      "mode": 0,
+      "inputs": [
+        {
+          "dir": 3,
+          "name": "source",
+          "type": "*",
+          "link": 172
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "rgthree-comfy",
+        "ver": "1.0.2506081210",
+        "Node name for S&R": "Display Any (rgthree)",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.1",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "0.31635222419169"
+      ],
+      "bgcolor": "hsla(300, 100%, 50%, 1)"
+    },
+    {
+      "id": 84,
+      "type": "HarmonyScore",
+      "pos": [
+        8855.232421875,
+        3777.140625
+      ],
+      "size": [
+        308.4477844238281,
+        150.72686767578125
+      ],
+      "flags": {},
+      "order": 37,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "composite_image",
+          "type": "IMAGE",
+          "link": 173
+        },
+        {
+          "name": "mask",
+          "type": "MASK",
+          "link": 174
+        },
+        {
+          "name": "harmonized_image",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 175
+        }
+      ],
+      "outputs": [
+        {
+          "name": "harmony_score",
+          "type": "FLOAT",
+          "links": [
+            172
+          ]
+        },
+        {
+          "name": "score_text",
+          "type": "STRING",
+          "links": []
+        }
+      ],
+      "properties": {
+        "aux_id": "fuselayer/comfyui-libcom-image-composition",
+        "ver": "a8b4b8150cf7dba08a38eb3c3defadc2c3c620fb",
+        "Node name for S&R": "HarmonyScore",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.1",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        1,
+        "upstream"
+      ]
+    },
+    {
+      "id": 95,
+      "type": "HarmonyScore",
+      "pos": [
+        6646.48291015625,
+        3951.755615234375
+      ],
+      "size": [
+        308.4477844238281,
+        150.72686767578125
+      ],
+      "flags": {},
+      "order": 17,
+      "mode": 4,
+      "inputs": [
+        {
+          "name": "composite_image",
+          "type": "IMAGE",
+          "link": 195
+        },
+        {
+          "name": "mask",
+          "type": "MASK",
+          "link": 196
+        },
+        {
+          "name": "harmonized_image",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 205
+        }
+      ],
+      "outputs": [
+        {
+          "name": "harmony_score",
+          "type": "FLOAT",
+          "links": [
+            198
+          ]
+        },
+        {
+          "name": "score_text",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "aux_id": "fuselayer/comfyui-libcom-image-composition",
+        "ver": "a8b4b8150cf7dba08a38eb3c3defadc2c3c620fb",
+        "Node name for S&R": "HarmonyScore",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.1",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        1,
+        "upstream"
+      ]
+    },
+    {
+      "id": 96,
+      "type": "Display Any (rgthree)",
+      "pos": [
+        7010,
+        3950
+      ],
+      "size": [
+        215.68540954589844,
+        135.06944274902344
+      ],
+      "flags": {},
+      "order": 60,
+      "mode": 4,
+      "inputs": [
+        {
+          "dir": 3,
+          "name": "source",
+          "type": "*",
+          "link": 198
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "rgthree-comfy",
+        "ver": "1.0.2506081210",
+        "Node name for S&R": "Display Any (rgthree)",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.1",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "0.2781941267154496"
+      ]
+    },
+    {
+      "id": 100,
+      "type": "Image Comparer (rgthree)",
+      "pos": [
+        9470.0791015625,
+        3564.29736328125
+      ],
+      "size": [
+        391.4438781738281,
+        254.7366180419922
+      ],
+      "flags": {},
+      "order": 38,
+      "mode": 0,
+      "inputs": [
+        {
+          "dir": 3,
+          "name": "image_a",
+          "type": "IMAGE",
+          "link": 215
+        },
+        {
+          "dir": 3,
+          "name": "image_b",
+          "type": "IMAGE",
+          "link": 214
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "rgthree-comfy",
+        "ver": "1.0.2506081210",
+        "comparer_mode": "Slide",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.1",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        [
+          {
+            "name": "A",
+            "selected": true,
+            "url": "/api/view?filename=rgthree.compare._temp_svkgu_00001_.png&type=temp&subfolder=&rand=0.9838618319547617"
+          },
+          {
+            "name": "B",
+            "selected": true,
+            "url": "/api/view?filename=rgthree.compare._temp_svkgu_00002_.png&type=temp&subfolder=&rand=0.7672399503319577"
+          }
+        ]
+      ]
+    },
+    {
+      "id": 105,
+      "type": "SaveImage",
+      "pos": [
+        7989.388671875,
+        3512.09521484375
+      ],
+      "size": [
+        210,
+        58
+      ],
+      "flags": {},
+      "order": 44,
+      "mode": 4,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 216
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.62",
+        "Node name for S&R": "SaveImage",
+        "ue_properties": {
+          "widget_ue_connectable": {
+            "filename_prefix": true
+          },
+          "version": "7.1",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "harmonizer-CDTNet_iHarmony4_256"
+      ]
+    },
+    {
+      "id": 106,
+      "type": "SaveImage",
+      "pos": [
+        7989.388671875,
+        3853.293701171875
+      ],
+      "size": [
+        210,
+        58
+      ],
+      "flags": {},
+      "order": 39,
+      "mode": 4,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 217
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.62",
+        "Node name for S&R": "SaveImage",
+        "ue_properties": {
+          "widget_ue_connectable": {
+            "filename_prefix": true
+          },
+          "version": "7.1",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "harmonizer-CDTNet_HAdobe5k_2048"
+      ]
+    },
+    {
+      "id": 107,
+      "type": "SaveImage",
+      "pos": [
+        7989.388671875,
+        4163.0400390625
+      ],
+      "size": [
+        210,
+        58
+      ],
+      "flags": {},
+      "order": 32,
+      "mode": 4,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 218
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.62",
+        "Node name for S&R": "SaveImage",
+        "ue_properties": {
+          "widget_ue_connectable": {
+            "filename_prefix": true
+          },
+          "version": "7.1",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "harmonizer-CDTNet_sim_base256"
+      ]
+    },
+    {
+      "id": 108,
+      "type": "SaveImage",
+      "pos": [
+        7989.388671875,
+        4508.81005859375
+      ],
+      "size": [
+        210,
+        58
+      ],
+      "flags": {},
+      "order": 28,
+      "mode": 4,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 219
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.62",
+        "Node name for S&R": "SaveImage",
+        "ue_properties": {
+          "widget_ue_connectable": {
+            "filename_prefix": true
+          },
+          "version": "7.1",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "harmonizer-harmonizer"
+      ]
+    },
+    {
+      "id": 109,
+      "type": "SaveImage",
+      "pos": [
+        7989.388671875,
+        4928.0078125
+      ],
+      "size": [
+        210,
+        58
+      ],
+      "flags": {},
+      "order": 51,
+      "mode": 4,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 220
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.62",
+        "Node name for S&R": "SaveImage",
+        "ue_properties": {
+          "widget_ue_connectable": {
+            "filename_prefix": true
+          },
+          "version": "7.1",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "harmonizer-enhancer"
+      ]
+    },
+    {
+      "id": 110,
+      "type": "SaveImage",
+      "pos": [
+        7989.388671875,
+        5302.5693359375
+      ],
+      "size": [
+        210,
+        58
+      ],
+      "flags": {},
+      "order": 55,
+      "mode": 4,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 221
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.62",
+        "Node name for S&R": "SaveImage",
+        "ue_properties": {
+          "widget_ue_connectable": {
+            "filename_prefix": true
+          },
+          "version": "7.1",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "harmonizer-issam_256"
+      ]
+    },
+    {
+      "id": 113,
+      "type": "Image Comparer (rgthree)",
+      "pos": [
+        9470.0791015625,
+        3914.298095703125
+      ],
+      "size": [
+        397.77801513671875,
+        275.85040283203125
+      ],
+      "flags": {},
+      "order": 33,
+      "mode": 0,
+      "inputs": [
+        {
+          "dir": 3,
+          "name": "image_a",
+          "type": "IMAGE",
+          "link": 223
+        },
+        {
+          "dir": 3,
+          "name": "image_b",
+          "type": "IMAGE",
+          "link": 231
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "rgthree-comfy",
+        "ver": "1.0.2506081210",
+        "comparer_mode": "Slide",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.1",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        [
+          {
+            "name": "A",
+            "selected": true,
+            "url": "/api/view?filename=rgthree.compare._temp_deufz_00001_.png&type=temp&subfolder=&rand=0.9991698139939024"
+          },
+          {
+            "name": "B",
+            "selected": true,
+            "url": "/api/view?filename=rgthree.compare._temp_deufz_00002_.png&type=temp&subfolder=&rand=0.24900937327216166"
+          }
+        ]
+      ]
+    },
+    {
+      "id": 114,
+      "type": "Image Comparer (rgthree)",
+      "pos": [
+        9470.0791015625,
+        4244.298828125
+      ],
+      "size": [
+        406.2235107421875,
+        324.4120788574219
+      ],
+      "flags": {},
+      "order": 29,
+      "mode": 0,
+      "inputs": [
+        {
+          "dir": 3,
+          "name": "image_a",
+          "type": "IMAGE",
+          "link": 225
+        },
+        {
+          "dir": 3,
+          "name": "image_b",
+          "type": "IMAGE",
+          "link": 232
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "rgthree-comfy",
+        "ver": "1.0.2506081210",
+        "comparer_mode": "Slide",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.1",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        [
+          {
+            "name": "A",
+            "selected": true,
+            "url": "/api/view?filename=rgthree.compare._temp_cghqt_00001_.png&type=temp&subfolder=&rand=0.7324701898857006"
+          },
+          {
+            "name": "B",
+            "selected": true,
+            "url": "/api/view?filename=rgthree.compare._temp_cghqt_00002_.png&type=temp&subfolder=&rand=0.20806853851927654"
+          }
+        ]
+      ]
+    },
+    {
+      "id": 115,
+      "type": "Image Comparer (rgthree)",
+      "pos": [
+        9470.0791015625,
+        4624.298828125
+      ],
+      "size": [
+        406.2235107421875,
+        324.4120788574219
+      ],
+      "flags": {},
+      "order": 52,
+      "mode": 0,
+      "inputs": [
+        {
+          "dir": 3,
+          "name": "image_a",
+          "type": "IMAGE",
+          "link": 227
+        },
+        {
+          "dir": 3,
+          "name": "image_b",
+          "type": "IMAGE",
+          "link": 233
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "rgthree-comfy",
+        "ver": "1.0.2506081210",
+        "comparer_mode": "Slide",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.1",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        [
+          {
+            "name": "A",
+            "selected": true,
+            "url": "/api/view?filename=rgthree.compare._temp_xihhe_00001_.png&type=temp&subfolder=&rand=0.6598020657473397"
+          },
+          {
+            "name": "B",
+            "selected": true,
+            "url": "/api/view?filename=rgthree.compare._temp_xihhe_00002_.png&type=temp&subfolder=&rand=0.5439626077982099"
+          }
+        ]
+      ]
+    },
+    {
+      "id": 116,
+      "type": "Image Comparer (rgthree)",
+      "pos": [
+        9470.0791015625,
+        5024.298828125
+      ],
+      "size": [
+        406.2235107421875,
+        324.4120788574219
+      ],
+      "flags": {},
+      "order": 56,
+      "mode": 0,
+      "inputs": [
+        {
+          "dir": 3,
+          "name": "image_a",
+          "type": "IMAGE",
+          "link": 229
+        },
+        {
+          "dir": 3,
+          "name": "image_b",
+          "type": "IMAGE",
+          "link": 234
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "rgthree-comfy",
+        "ver": "1.0.2506081210",
+        "comparer_mode": "Slide",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.1",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        [
+          {
+            "name": "A",
+            "selected": true,
+            "url": "/api/view?filename=rgthree.compare._temp_crjut_00001_.png&type=temp&subfolder=&rand=0.9612493015574936"
+          },
+          {
+            "name": "B",
+            "selected": true,
+            "url": "/api/view?filename=rgthree.compare._temp_crjut_00002_.png&type=temp&subfolder=&rand=0.987415260827933"
+          }
+        ]
+      ]
+    },
+    {
+      "id": 117,
+      "type": "SaveImage",
+      "pos": [
+        7989.388671875,
+        5562.849609375
+      ],
+      "size": [
+        210,
+        58
+      ],
+      "flags": {},
+      "order": 45,
+      "mode": 4,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 235
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.62",
+        "Node name for S&R": "SaveImage",
+        "ue_properties": {
+          "widget_ue_connectable": {
+            "filename_prefix": true
+          },
+          "version": "7.1",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "harmonizer-Auto"
+      ]
+    },
+    {
+      "id": 118,
+      "type": "Image Comparer (rgthree)",
+      "pos": [
+        9470.0791015625,
+        5414.298828125
+      ],
+      "size": [
+        380.8869934082031,
+        362.4168701171875
+      ],
+      "flags": {},
+      "order": 46,
+      "mode": 0,
+      "inputs": [
+        {
+          "dir": 3,
+          "name": "image_a",
+          "type": "IMAGE",
+          "link": 242
+        },
+        {
+          "dir": 3,
+          "name": "image_b",
+          "type": "IMAGE",
+          "link": 244
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "rgthree-comfy",
+        "ver": "1.0.2506081210",
+        "comparer_mode": "Slide",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.1",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        [
+          {
+            "name": "A",
+            "selected": true,
+            "url": "/api/view?filename=rgthree.compare._temp_sizay_00001_.png&type=temp&subfolder=&rand=0.7039684513634428"
+          },
+          {
+            "name": "B",
+            "selected": true,
+            "url": "/api/view?filename=rgthree.compare._temp_sizay_00002_.png&type=temp&subfolder=&rand=0.8584564448593702"
+          }
+        ]
+      ]
+    },
+    {
+      "id": 119,
+      "type": "Image Comparer (rgthree)",
+      "pos": [
+        9908.98828125,
+        5329.68505859375
+      ],
+      "size": [
+        456.7024230957031,
+        364.3118896484375
+      ],
+      "flags": {},
+      "order": 58,
+      "mode": 0,
+      "inputs": [
+        {
+          "dir": 3,
+          "name": "image_a",
+          "type": "IMAGE",
+          "link": 247
+        },
+        {
+          "dir": 3,
+          "name": "image_b",
+          "type": "IMAGE",
+          "link": 248
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "rgthree-comfy",
+        "ver": "1.0.2506081210",
+        "comparer_mode": "Slide",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.1",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        [
+          {
+            "name": "A",
+            "selected": true,
+            "url": "/api/view?filename=rgthree.compare._temp_ltizb_00001_.png&type=temp&subfolder=&rand=0.7278508120864976"
+          },
+          {
+            "name": "B",
+            "selected": true,
+            "url": "/api/view?filename=rgthree.compare._temp_ltizb_00002_.png&type=temp&subfolder=&rand=0.2829276113434236"
+          }
+        ]
+      ]
+    },
+    {
+      "id": 120,
+      "type": "HarmonyScore",
+      "pos": [
+        8855.232421875,
+        5706.783203125
+      ],
+      "size": [
+        308.4477844238281,
+        150.72686767578125
+      ],
+      "flags": {},
+      "order": 47,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "composite_image",
+          "type": "IMAGE",
+          "link": 249
+        },
+        {
+          "name": "mask",
+          "type": "MASK",
+          "link": 250
+        },
+        {
+          "name": "harmonized_image",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 261
+        }
+      ],
+      "outputs": [
+        {
+          "name": "harmony_score",
+          "type": "FLOAT",
+          "links": [
+            252
+          ]
+        },
+        {
+          "name": "score_text",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "aux_id": "fuselayer/comfyui-libcom-image-composition",
+        "ver": "a8b4b8150cf7dba08a38eb3c3defadc2c3c620fb",
+        "Node name for S&R": "HarmonyScore",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.1",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        1,
+        "upstream"
+      ]
+    },
+    {
+      "id": 121,
+      "type": "Display Any (rgthree)",
+      "pos": [
+        9204.0126953125,
+        5716.783203125
+      ],
+      "size": [
+        215.68540954589844,
+        135.06944274902344
+      ],
+      "flags": {},
+      "order": 87,
+      "mode": 0,
+      "inputs": [
+        {
+          "dir": 3,
+          "name": "source",
+          "type": "*",
+          "link": 252
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "rgthree-comfy",
+        "ver": "1.0.2506081210",
+        "Node name for S&R": "Display Any (rgthree)",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.1",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "0.31635222419169"
+      ],
+      "bgcolor": "hsla(300, 100%, 50%, 1)"
+    },
+    {
+      "id": 127,
+      "type": "PreviewImage",
+      "pos": [
+        7285.3466796875,
+        4832.6357421875
+      ],
+      "size": [
+        140,
+        26
+      ],
+      "flags": {},
+      "order": 24,
+      "mode": 4,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 269
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.62",
+        "Node name for S&R": "PreviewImage",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.1",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 128,
+      "type": "Note",
+      "pos": [
+        6366.37109375,
+        4318.7158203125
+      ],
+      "size": [
+        220.1601104736328,
+        88
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.1",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "Combined image goes here\n"
+      ],
+      "color": "#432",
+      "bgcolor": "hsla(40, 33.3%, 30%, 1)"
+    },
+    {
+      "id": 129,
+      "type": "Note",
+      "pos": [
+        6379.55908203125,
+        4837.50830078125
+      ],
+      "size": [
+        220.1601104736328,
+        88
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.1",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "Composite layer (the image you added) with alpha background goes here. You can use a black and white mask generated in photoshop or elsewhere, but you don't need to. "
+      ],
+      "color": "#432",
+      "bgcolor": "hsla(40, 33.3%, 30%, 1)"
+    },
+    {
+      "id": 130,
+      "type": "Display Any (rgthree)",
+      "pos": [
+        9202.1669921875,
+        3022.389404296875
+      ],
+      "size": [
+        215.68540954589844,
+        135.06944274902344
+      ],
+      "flags": {},
+      "order": 90,
+      "mode": 0,
+      "inputs": [
+        {
+          "dir": 3,
+          "name": "source",
+          "type": "*",
+          "link": 276
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "rgthree-comfy",
+        "ver": "1.0.2506081210",
+        "Node name for S&R": "Display Any (rgthree)",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.1",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "0.5020049360276332"
+      ],
+      "bgcolor": "hsla(300, 100%, 50%, 1)"
+    },
+    {
+      "id": 131,
+      "type": "ImageHarmonization",
+      "pos": [
+        7551.15380859375,
+        3092.794677734375
+      ],
+      "size": [
+        317.79998779296875,
+        150
+      ],
+      "flags": {},
+      "order": 18,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "composite_image",
+          "type": "IMAGE",
+          "link": 277
+        },
+        {
+          "name": "mask",
+          "type": "MASK",
+          "link": 278
+        }
+      ],
+      "outputs": [
+        {
+          "name": "harmonized_image",
+          "type": "IMAGE",
+          "links": [
+            284,
+            285,
+            287,
+            303,
+            306
+          ]
+        }
+      ],
+      "properties": {
+        "aux_id": "fuselayer/comfyui-libcom-image-composition",
+        "ver": "a8b4b8150cf7dba08a38eb3c3defadc2c3c620fb",
+        "Node name for S&R": "ImageHarmonization",
+        "ue_properties": {
+          "widget_ue_connectable": {
+            "model_variant": true,
+            "max_resolution": true
+          },
+          "version": "7.1",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "PCTNet_CNN",
+        1,
+        "upstream",
+        4096
+      ]
+    },
+    {
+      "id": 132,
+      "type": "HarmonyScore",
+      "pos": [
+        8855.232421875,
+        3006.851318359375
+      ],
+      "size": [
+        308.4477844238281,
+        150.72686767578125
+      ],
+      "flags": {},
+      "order": 64,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "composite_image",
+          "type": "IMAGE",
+          "link": 279
+        },
+        {
+          "name": "mask",
+          "type": "MASK",
+          "link": 280
+        },
+        {
+          "name": "harmonized_image",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 303
+        }
+      ],
+      "outputs": [
+        {
+          "name": "harmony_score",
+          "type": "FLOAT",
+          "links": [
+            276
+          ]
+        },
+        {
+          "name": "score_text",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "aux_id": "fuselayer/comfyui-libcom-image-composition",
+        "ver": "a8b4b8150cf7dba08a38eb3c3defadc2c3c620fb",
+        "Node name for S&R": "HarmonyScore",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.1",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        1,
+        "upstream"
+      ]
+    },
+    {
+      "id": 133,
+      "type": "Image Comparer (rgthree)",
+      "pos": [
+        9470.0791015625,
+        2844.29736328125
+      ],
+      "size": [
+        393.5980529785156,
+        289.0325927734375
+      ],
+      "flags": {},
+      "order": 65,
+      "mode": 0,
+      "inputs": [
+        {
+          "dir": 3,
+          "name": "image_a",
+          "type": "IMAGE",
+          "link": 282
+        },
+        {
+          "dir": 3,
+          "name": "image_b",
+          "type": "IMAGE",
+          "link": 306
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "rgthree-comfy",
+        "ver": "1.0.2506081210",
+        "comparer_mode": "Slide",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.1",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        [
+          {
+            "name": "A",
+            "selected": true,
+            "url": "/api/view?filename=rgthree.compare._temp_mtoqi_00001_.png&type=temp&subfolder=&rand=0.22613385324585966"
+          },
+          {
+            "name": "B",
+            "selected": true,
+            "url": "/api/view?filename=rgthree.compare._temp_mtoqi_00002_.png&type=temp&subfolder=&rand=0.8665954848707552"
+          }
+        ]
+      ]
+    },
+    {
+      "id": 134,
+      "type": "SaveImage",
+      "pos": [
+        7989.388671875,
+        3103.470947265625
+      ],
+      "size": [
+        210,
+        58
+      ],
+      "flags": {},
+      "order": 61,
+      "mode": 4,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 284
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.62",
+        "Node name for S&R": "SaveImage",
+        "ue_properties": {
+          "widget_ue_connectable": {
+            "filename_prefix": true
+          },
+          "version": "7.1",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "harmonizer-PCTNet_CNN"
+      ]
+    },
+    {
+      "id": 135,
+      "type": "Image Comparer (rgthree)",
+      "pos": [
+        9908.98828125,
+        2869.682861328125
+      ],
+      "size": [
+        454.1659851074219,
+        318.89483642578125
+      ],
+      "flags": {},
+      "order": 62,
+      "mode": 0,
+      "inputs": [
+        {
+          "dir": 3,
+          "name": "image_a",
+          "type": "IMAGE",
+          "link": 285
+        },
+        {
+          "dir": 3,
+          "name": "image_b",
+          "type": "IMAGE",
+          "link": 286
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "rgthree-comfy",
+        "ver": "1.0.2506081210",
+        "comparer_mode": "Slide",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.1",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        [
+          {
+            "name": "A",
+            "selected": true,
+            "url": "/api/view?filename=rgthree.compare._temp_pntcm_00001_.png&type=temp&subfolder=&rand=0.8467504607569816"
+          },
+          {
+            "name": "B",
+            "selected": true,
+            "url": "/api/view?filename=rgthree.compare._temp_pntcm_00002_.png&type=temp&subfolder=&rand=0.6147164724450033"
+          }
+        ]
+      ]
+    },
+    {
+      "id": 136,
+      "type": "PreviewImage",
+      "pos": [
+        8339.8984375,
+        2821.1357421875
+      ],
+      "size": [
+        482.1646423339844,
+        349.5380859375
+      ],
+      "flags": {},
+      "order": 63,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 287
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.62",
+        "Node name for S&R": "PreviewImage",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.1",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 138,
+      "type": "Display Any (rgthree)",
+      "pos": [
+        9204.0126953125,
+        2610.536865234375
+      ],
+      "size": [
+        215.68540954589844,
+        135.06944274902344
+      ],
+      "flags": {},
+      "order": 91,
+      "mode": 0,
+      "inputs": [
+        {
+          "dir": 3,
+          "name": "source",
+          "type": "*",
+          "link": 291
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "rgthree-comfy",
+        "ver": "1.0.2506081210",
+        "Node name for S&R": "Display Any (rgthree)",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.1",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "0.2752741407240943"
+      ],
+      "bgcolor": "hsla(300, 100%, 50%, 1)"
+    },
+    {
+      "id": 139,
+      "type": "HarmonyScore",
+      "pos": [
+        8855.232421875,
+        2600.536865234375
+      ],
+      "size": [
+        308.4477844238281,
+        150.72686767578125
+      ],
+      "flags": {},
+      "order": 69,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "composite_image",
+          "type": "IMAGE",
+          "link": 292
+        },
+        {
+          "name": "mask",
+          "type": "MASK",
+          "link": 293
+        },
+        {
+          "name": "harmonized_image",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 312
+        }
+      ],
+      "outputs": [
+        {
+          "name": "harmony_score",
+          "type": "FLOAT",
+          "links": [
+            291
+          ]
+        },
+        {
+          "name": "score_text",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "aux_id": "fuselayer/comfyui-libcom-image-composition",
+        "ver": "a8b4b8150cf7dba08a38eb3c3defadc2c3c620fb",
+        "Node name for S&R": "HarmonyScore",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.1",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        1,
+        "upstream"
+      ]
+    },
+    {
+      "id": 140,
+      "type": "SaveImage",
+      "pos": [
+        7989.388671875,
+        2687.66650390625
+      ],
+      "size": [
+        210,
+        58
+      ],
+      "flags": {},
+      "order": 66,
+      "mode": 4,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 309
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.62",
+        "Node name for S&R": "SaveImage",
+        "ue_properties": {
+          "widget_ue_connectable": {
+            "filename_prefix": true
+          },
+          "version": "7.1",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "harmonizer-PCTNet_ViT"
+      ]
+    },
+    {
+      "id": 141,
+      "type": "PreviewImage",
+      "pos": [
+        8339.8984375,
+        2405.331298828125
+      ],
+      "size": [
+        482.1646423339844,
+        349.5380859375
+      ],
+      "flags": {},
+      "order": 67,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 310
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.62",
+        "Node name for S&R": "PreviewImage",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.1",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 142,
+      "type": "Image Comparer (rgthree)",
+      "pos": [
+        9470.0791015625,
+        2474.068115234375
+      ],
+      "size": [
+        393.5980529785156,
+        289.0325927734375
+      ],
+      "flags": {},
+      "order": 70,
+      "mode": 0,
+      "inputs": [
+        {
+          "dir": 3,
+          "name": "image_a",
+          "type": "IMAGE",
+          "link": 297
+        },
+        {
+          "dir": 3,
+          "name": "image_b",
+          "type": "IMAGE",
+          "link": 313
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "rgthree-comfy",
+        "ver": "1.0.2506081210",
+        "comparer_mode": "Slide",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.1",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        [
+          {
+            "name": "A",
+            "selected": true,
+            "url": "/api/view?filename=rgthree.compare._temp_chdmi_00001_.png&type=temp&subfolder=&rand=0.7091565278197164"
+          },
+          {
+            "name": "B",
+            "selected": true,
+            "url": "/api/view?filename=rgthree.compare._temp_chdmi_00002_.png&type=temp&subfolder=&rand=0.9565210004845431"
+          }
+        ]
+      ]
+    },
+    {
+      "id": 143,
+      "type": "Image Comparer (rgthree)",
+      "pos": [
+        9908.98828125,
+        2449.682861328125
+      ],
+      "size": [
+        454.1659851074219,
+        318.89483642578125
+      ],
+      "flags": {},
+      "order": 68,
+      "mode": 0,
+      "inputs": [
+        {
+          "dir": 3,
+          "name": "image_a",
+          "type": "IMAGE",
+          "link": 311
+        },
+        {
+          "dir": 3,
+          "name": "image_b",
+          "type": "IMAGE",
+          "link": 300
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "rgthree-comfy",
+        "ver": "1.0.2506081210",
+        "comparer_mode": "Slide",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.1",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        [
+          {
+            "name": "A",
+            "selected": true,
+            "url": "/api/view?filename=rgthree.compare._temp_kmicg_00001_.png&type=temp&subfolder=&rand=0.2641954359947293"
+          },
+          {
+            "name": "B",
+            "selected": true,
+            "url": "/api/view?filename=rgthree.compare._temp_kmicg_00002_.png&type=temp&subfolder=&rand=0.2343494844707077"
+          }
+        ]
+      ]
+    },
+    {
+      "id": 147,
+      "type": "ImageHarmonization",
+      "pos": [
+        7551.15380859375,
+        2676.990234375
+      ],
+      "size": [
+        317.79998779296875,
+        150
+      ],
+      "flags": {},
+      "order": 19,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "composite_image",
+          "type": "IMAGE",
+          "link": 307
+        },
+        {
+          "name": "mask",
+          "type": "MASK",
+          "link": 308
+        }
+      ],
+      "outputs": [
+        {
+          "name": "harmonized_image",
+          "type": "IMAGE",
+          "links": [
+            309,
+            310,
+            311,
+            312,
+            313
+          ]
+        }
+      ],
+      "properties": {
+        "aux_id": "fuselayer/comfyui-libcom-image-composition",
+        "ver": "a8b4b8150cf7dba08a38eb3c3defadc2c3c620fb",
+        "Node name for S&R": "ImageHarmonization",
+        "ue_properties": {
+          "widget_ue_connectable": {
+            "model_variant": true
+          },
+          "version": "7.1",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "PCTNet_ViT",
+        1,
+        "upstream",
+        1024
+      ]
+    },
+    {
+      "id": 159,
+      "type": "Display Any (rgthree)",
+      "pos": [
+        9779.39453125,
+        934.2312622070312
+      ],
+      "size": [
+        215.68540954589844,
+        135.06944274902344
+      ],
+      "flags": {},
+      "order": 92,
+      "mode": 4,
+      "inputs": [
+        {
+          "dir": 3,
+          "name": "source",
+          "type": "*",
+          "link": 316
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "rgthree-comfy",
+        "ver": "1.0.2506081210",
+        "Node name for S&R": "Display Any (rgthree)",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.1",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "0.7110917195632284"
+      ],
+      "bgcolor": "hsla(300, 100%, 50%, 1)"
+    },
+    {
+      "id": 160,
+      "type": "PreviewImage",
+      "pos": [
+        8917.3056640625,
+        719.7626342773438
+      ],
+      "size": [
+        482.1646423339844,
+        349.5380859375
+      ],
+      "flags": {},
+      "order": 71,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 348
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.62",
+        "Node name for S&R": "PreviewImage",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.1",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 161,
+      "type": "HarmonyScore",
+      "pos": [
+        9432.6396484375,
+        918.5738525390625
+      ],
+      "size": [
+        308.4477844238281,
+        150.72686767578125
+      ],
+      "flags": {},
+      "order": 72,
+      "mode": 4,
+      "inputs": [
+        {
+          "name": "composite_image",
+          "type": "IMAGE",
+          "link": 349
+        },
+        {
+          "name": "mask",
+          "type": "MASK",
+          "link": 319
+        },
+        {
+          "name": "harmonized_image",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "harmony_score",
+          "type": "FLOAT",
+          "links": [
+            316
+          ]
+        },
+        {
+          "name": "score_text",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "aux_id": "fuselayer/comfyui-libcom-image-composition",
+        "ver": "a8b4b8150cf7dba08a38eb3c3defadc2c3c620fb",
+        "Node name for S&R": "HarmonyScore",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.1",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        1,
+        "upstream"
+      ]
+    },
+    {
+      "id": 162,
+      "type": "Image Comparer (rgthree)",
+      "pos": [
+        10021.154296875,
+        780.2681274414062
+      ],
+      "size": [
+        393.5980529785156,
+        289.0325927734375
+      ],
+      "flags": {},
+      "order": 73,
+      "mode": 0,
+      "inputs": [
+        {
+          "dir": 3,
+          "name": "image_a",
+          "type": "IMAGE",
+          "link": 320
+        },
+        {
+          "dir": 3,
+          "name": "image_b",
+          "type": "IMAGE",
+          "link": 350
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "rgthree-comfy",
+        "ver": "1.0.2506081210",
+        "comparer_mode": "Slide",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.1",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        [
+          {
+            "name": "A",
+            "selected": true,
+            "url": "/api/view?filename=rgthree.compare._temp_puctu_00001_.png&type=temp&subfolder=&rand=0.4167263691004066"
+          },
+          {
+            "name": "B",
+            "selected": true,
+            "url": "/api/view?filename=rgthree.compare._temp_puctu_00002_.png&type=temp&subfolder=&rand=0.033560086320129634"
+          }
+        ]
+      ]
+    },
+    {
+      "id": 181,
+      "type": "ImageHarmonization",
+      "pos": [
+        8273.287109375,
+        919.3007202148438
+      ],
+      "size": [
+        317.79998779296875,
+        150
+      ],
+      "flags": {},
+      "order": 20,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "composite_image",
+          "type": "IMAGE",
+          "link": 346
+        },
+        {
+          "name": "mask",
+          "type": "MASK",
+          "link": 347
+        }
+      ],
+      "outputs": [
+        {
+          "name": "harmonized_image",
+          "type": "IMAGE",
+          "links": [
+            348,
+            349,
+            350
+          ]
+        }
+      ],
+      "properties": {
+        "aux_id": "fuselayer/comfyui-libcom-image-composition",
+        "ver": "a8b4b8150cf7dba08a38eb3c3defadc2c3c620fb",
+        "Node name for S&R": "ImageHarmonization",
+        "ue_properties": {
+          "widget_ue_connectable": {
+            "model_variant": true
+          },
+          "version": "7.1",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "PCTNet_CNN",
+        1,
+        "upstream",
+        4096
+      ]
+    },
+    {
+      "id": 182,
+      "type": "PreviewImage",
+      "pos": [
+        8904.7939453125,
+        1155.2540283203125
+      ],
+      "size": [
+        482.1646423339844,
+        349.5380859375
+      ],
+      "flags": {},
+      "order": 74,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 360
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.62",
+        "Node name for S&R": "PreviewImage",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.1",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 183,
+      "type": "HarmonyScore",
+      "pos": [
+        9420.12890625,
+        1354.0654296875
+      ],
+      "size": [
+        308.4477844238281,
+        150.72686767578125
+      ],
+      "flags": {},
+      "order": 75,
+      "mode": 4,
+      "inputs": [
+        {
+          "name": "composite_image",
+          "type": "IMAGE",
+          "link": 361
+        },
+        {
+          "name": "mask",
+          "type": "MASK",
+          "link": 362
+        },
+        {
+          "name": "harmonized_image",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "harmony_score",
+          "type": "FLOAT",
+          "links": [
+            363
+          ]
+        },
+        {
+          "name": "score_text",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "aux_id": "fuselayer/comfyui-libcom-image-composition",
+        "ver": "a8b4b8150cf7dba08a38eb3c3defadc2c3c620fb",
+        "Node name for S&R": "HarmonyScore",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.1",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        1,
+        "upstream"
+      ]
+    },
+    {
+      "id": 184,
+      "type": "Display Any (rgthree)",
+      "pos": [
+        9766.8837890625,
+        1369.7227783203125
+      ],
+      "size": [
+        215.68540954589844,
+        135.06944274902344
+      ],
+      "flags": {},
+      "order": 93,
+      "mode": 4,
+      "inputs": [
+        {
+          "dir": 3,
+          "name": "source",
+          "type": "*",
+          "link": 363
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "rgthree-comfy",
+        "ver": "1.0.2506081210",
+        "Node name for S&R": "Display Any (rgthree)",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.1",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "0.7110917195632284"
+      ],
+      "bgcolor": "hsla(300, 100%, 50%, 1)"
+    },
+    {
+      "id": 185,
+      "type": "Image Comparer (rgthree)",
+      "pos": [
+        10008.6435546875,
+        1215.7596435546875
+      ],
+      "size": [
+        393.5980529785156,
+        289.0325927734375
+      ],
+      "flags": {},
+      "order": 76,
+      "mode": 0,
+      "inputs": [
+        {
+          "dir": 3,
+          "name": "image_a",
+          "type": "IMAGE",
+          "link": 364
+        },
+        {
+          "dir": 3,
+          "name": "image_b",
+          "type": "IMAGE",
+          "link": 365
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "rgthree-comfy",
+        "ver": "1.0.2506081210",
+        "comparer_mode": "Slide",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.1",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        [
+          {
+            "name": "A",
+            "selected": true,
+            "url": "/api/view?filename=rgthree.compare._temp_zfvnk_00001_.png&type=temp&subfolder=&rand=0.544635004442456"
+          },
+          {
+            "name": "B",
+            "selected": true,
+            "url": "/api/view?filename=rgthree.compare._temp_zfvnk_00002_.png&type=temp&subfolder=&rand=0.27081975143031456"
+          }
+        ]
+      ]
+    },
+    {
+      "id": 186,
+      "type": "ImageHarmonization",
+      "pos": [
+        8260.7734375,
+        1354.792236328125
+      ],
+      "size": [
+        317.79998779296875,
+        150
+      ],
+      "flags": {},
+      "order": 21,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "composite_image",
+          "type": "IMAGE",
+          "link": 366
+        },
+        {
+          "name": "mask",
+          "type": "MASK",
+          "link": 367
+        }
+      ],
+      "outputs": [
+        {
+          "name": "harmonized_image",
+          "type": "IMAGE",
+          "links": [
+            360,
+            361,
+            365
+          ]
+        }
+      ],
+      "properties": {
+        "aux_id": "fuselayer/comfyui-libcom-image-composition",
+        "ver": "a8b4b8150cf7dba08a38eb3c3defadc2c3c620fb",
+        "Node name for S&R": "ImageHarmonization",
+        "ue_properties": {
+          "widget_ue_connectable": {
+            "model_variant": true
+          },
+          "version": "7.1",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "PCTNet_CNN",
+        1,
+        "mask",
+        4096
+      ]
+    },
+    {
+      "id": 187,
+      "type": "PreviewImage",
+      "pos": [
+        8901.89453125,
+        1554.990966796875
+      ],
+      "size": [
+        482.1646423339844,
+        349.5380859375
+      ],
+      "flags": {},
+      "order": 77,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 368
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.62",
+        "Node name for S&R": "PreviewImage",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.1",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 188,
+      "type": "HarmonyScore",
+      "pos": [
+        9417.228515625,
+        1753.8021240234375
+      ],
+      "size": [
+        308.4477844238281,
+        150.72686767578125
+      ],
+      "flags": {},
+      "order": 78,
+      "mode": 4,
+      "inputs": [
+        {
+          "name": "composite_image",
+          "type": "IMAGE",
+          "link": 369
+        },
+        {
+          "name": "mask",
+          "type": "MASK",
+          "link": 370
+        },
+        {
+          "name": "harmonized_image",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "harmony_score",
+          "type": "FLOAT",
+          "links": [
+            371
+          ]
+        },
+        {
+          "name": "score_text",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "aux_id": "fuselayer/comfyui-libcom-image-composition",
+        "ver": "a8b4b8150cf7dba08a38eb3c3defadc2c3c620fb",
+        "Node name for S&R": "HarmonyScore",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.1",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        1,
+        "upstream"
+      ]
+    },
+    {
+      "id": 189,
+      "type": "Display Any (rgthree)",
+      "pos": [
+        9763.9833984375,
+        1769.4595947265625
+      ],
+      "size": [
+        215.68540954589844,
+        135.06944274902344
+      ],
+      "flags": {},
+      "order": 94,
+      "mode": 4,
+      "inputs": [
+        {
+          "dir": 3,
+          "name": "source",
+          "type": "*",
+          "link": 371
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "rgthree-comfy",
+        "ver": "1.0.2506081210",
+        "Node name for S&R": "Display Any (rgthree)",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.1",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "0.7110917195632284"
+      ],
+      "bgcolor": "hsla(300, 100%, 50%, 1)"
+    },
+    {
+      "id": 190,
+      "type": "Image Comparer (rgthree)",
+      "pos": [
+        10005.7431640625,
+        1615.4964599609375
+      ],
+      "size": [
+        393.5980529785156,
+        289.0325927734375
+      ],
+      "flags": {},
+      "order": 79,
+      "mode": 0,
+      "inputs": [
+        {
+          "dir": 3,
+          "name": "image_a",
+          "type": "IMAGE",
+          "link": 372
+        },
+        {
+          "dir": 3,
+          "name": "image_b",
+          "type": "IMAGE",
+          "link": 373
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "rgthree-comfy",
+        "ver": "1.0.2506081210",
+        "comparer_mode": "Slide",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.1",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        [
+          {
+            "name": "A",
+            "selected": true,
+            "url": "/api/view?filename=rgthree.compare._temp_frxhf_00001_.png&type=temp&subfolder=&rand=0.40058349448981045"
+          },
+          {
+            "name": "B",
+            "selected": true,
+            "url": "/api/view?filename=rgthree.compare._temp_frxhf_00002_.png&type=temp&subfolder=&rand=0.9588406683821009"
+          }
+        ]
+      ]
+    },
+    {
+      "id": 191,
+      "type": "ImageHarmonization",
+      "pos": [
+        8257.876953125,
+        1754.529052734375
+      ],
+      "size": [
+        317.79998779296875,
+        150
+      ],
+      "flags": {},
+      "order": 22,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "composite_image",
+          "type": "IMAGE",
+          "link": 374
+        },
+        {
+          "name": "mask",
+          "type": "MASK",
+          "link": 375
+        }
+      ],
+      "outputs": [
+        {
+          "name": "harmonized_image",
+          "type": "IMAGE",
+          "links": [
+            368,
+            369,
+            373
+          ]
+        }
+      ],
+      "properties": {
+        "aux_id": "fuselayer/comfyui-libcom-image-composition",
+        "ver": "a8b4b8150cf7dba08a38eb3c3defadc2c3c620fb",
+        "Node name for S&R": "ImageHarmonization",
+        "ue_properties": {
+          "widget_ue_connectable": {
+            "model_variant": true
+          },
+          "version": "7.1",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "PCTNet_CNN",
+        1,
+        "attention",
+        4096
+      ]
+    },
+    {
+      "id": 192,
+      "type": "PreviewImage",
+      "pos": [
+        8907.6884765625,
+        1969.2108154296875
+      ],
+      "size": [
+        482.1646423339844,
+        349.5380859375
+      ],
+      "flags": {},
+      "order": 80,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 376
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.62",
+        "Node name for S&R": "PreviewImage",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.1",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 193,
+      "type": "HarmonyScore",
+      "pos": [
+        9423.0224609375,
+        2168.021728515625
+      ],
+      "size": [
+        308.4477844238281,
+        150.72686767578125
+      ],
+      "flags": {},
+      "order": 81,
+      "mode": 4,
+      "inputs": [
+        {
+          "name": "composite_image",
+          "type": "IMAGE",
+          "link": 377
+        },
+        {
+          "name": "mask",
+          "type": "MASK",
+          "link": 378
+        },
+        {
+          "name": "harmonized_image",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "harmony_score",
+          "type": "FLOAT",
+          "links": [
+            379
+          ]
+        },
+        {
+          "name": "score_text",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "aux_id": "fuselayer/comfyui-libcom-image-composition",
+        "ver": "a8b4b8150cf7dba08a38eb3c3defadc2c3c620fb",
+        "Node name for S&R": "HarmonyScore",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.1",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        1,
+        "upstream"
+      ]
+    },
+    {
+      "id": 194,
+      "type": "Display Any (rgthree)",
+      "pos": [
+        9769.77734375,
+        2183.67919921875
+      ],
+      "size": [
+        215.68540954589844,
+        135.06944274902344
+      ],
+      "flags": {},
+      "order": 95,
+      "mode": 4,
+      "inputs": [
+        {
+          "dir": 3,
+          "name": "source",
+          "type": "*",
+          "link": 379
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "rgthree-comfy",
+        "ver": "1.0.2506081210",
+        "Node name for S&R": "Display Any (rgthree)",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.1",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "0.7110917195632284"
+      ],
+      "bgcolor": "hsla(300, 100%, 50%, 1)"
+    },
+    {
+      "id": 195,
+      "type": "Image Comparer (rgthree)",
+      "pos": [
+        10011.537109375,
+        2029.71630859375
+      ],
+      "size": [
+        393.5980529785156,
+        289.0325927734375
+      ],
+      "flags": {},
+      "order": 82,
+      "mode": 0,
+      "inputs": [
+        {
+          "dir": 3,
+          "name": "image_a",
+          "type": "IMAGE",
+          "link": 380
+        },
+        {
+          "dir": 3,
+          "name": "image_b",
+          "type": "IMAGE",
+          "link": 381
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "rgthree-comfy",
+        "ver": "1.0.2506081210",
+        "comparer_mode": "Slide",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.1",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        [
+          {
+            "name": "A",
+            "selected": true,
+            "url": "/api/view?filename=rgthree.compare._temp_ybhbz_00001_.png&type=temp&subfolder=&rand=0.5334268539966537"
+          },
+          {
+            "name": "B",
+            "selected": true,
+            "url": "/api/view?filename=rgthree.compare._temp_ybhbz_00002_.png&type=temp&subfolder=&rand=0.07935184429987718"
+          }
+        ]
+      ]
+    },
+    {
+      "id": 196,
+      "type": "ImageHarmonization",
+      "pos": [
+        8263.6689453125,
+        2168.74853515625
+      ],
+      "size": [
+        317.79998779296875,
+        150
+      ],
+      "flags": {},
+      "order": 23,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "composite_image",
+          "type": "IMAGE",
+          "link": 382
+        },
+        {
+          "name": "mask",
+          "type": "MASK",
+          "link": 383
+        }
+      ],
+      "outputs": [
+        {
+          "name": "harmonized_image",
+          "type": "IMAGE",
+          "links": [
+            376,
+            377,
+            381
+          ]
+        }
+      ],
+      "properties": {
+        "aux_id": "fuselayer/comfyui-libcom-image-composition",
+        "ver": "a8b4b8150cf7dba08a38eb3c3defadc2c3c620fb",
+        "Node name for S&R": "ImageHarmonization",
+        "ue_properties": {
+          "widget_ue_connectable": {
+            "model_variant": true
+          },
+          "version": "7.1",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "PCTNet_CNN",
+        2,
+        "upstream",
+        4096
+      ]
+    },
+    {
+      "id": 197,
+      "type": "Note",
+      "pos": [
+        6953.923828125,
+        2745.256591796875
+      ],
+      "size": [
+        368.91119384765625,
+        88
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.1",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "PCTNets are iffy. Not sure if the implementation is correct. "
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 198,
+      "type": "Note",
+      "pos": [
+        8943.6240234375,
+        5957.87158203125
+      ],
+      "size": [
+        439.9898681640625,
+        149.18617248535156
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.1",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "Harmony score is probably not a useful metric. It doesn't seem to correspond with visual similarity. "
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    }
+  ],
+  "links": [
+    [
+      4,
+      6,
+      0,
+      5,
+      0,
+      "MASK"
+    ],
+    [
+      8,
+      5,
+      0,
+      9,
+      0,
+      "IMAGE"
+    ],
+    [
+      61,
+      7,
+      0,
+      36,
+      0,
+      "IMAGE"
+    ],
+    [
+      69,
+      8,
+      0,
+      37,
+      0,
+      "IMAGE"
+    ],
+    [
+      73,
+      37,
+      0,
+      39,
+      0,
+      "MASK"
+    ],
+    [
+      75,
+      8,
+      1,
+      6,
+      0,
+      "MASK"
+    ],
+    [
+      88,
+      46,
+      0,
+      45,
+      0,
+      "IMAGE"
+    ],
+    [
+      89,
+      7,
+      0,
+      46,
+      0,
+      "IMAGE"
+    ],
+    [
+      90,
+      6,
+      0,
+      46,
+      1,
+      "MASK"
+    ],
+    [
+      91,
+      48,
+      0,
+      47,
+      0,
+      "IMAGE"
+    ],
+    [
+      92,
+      7,
+      0,
+      48,
+      0,
+      "IMAGE"
+    ],
+    [
+      93,
+      6,
+      0,
+      48,
+      1,
+      "MASK"
+    ],
+    [
+      94,
+      50,
+      0,
+      49,
+      0,
+      "IMAGE"
+    ],
+    [
+      95,
+      7,
+      0,
+      50,
+      0,
+      "IMAGE"
+    ],
+    [
+      96,
+      6,
+      0,
+      50,
+      1,
+      "MASK"
+    ],
+    [
+      97,
+      52,
+      0,
+      51,
+      0,
+      "IMAGE"
+    ],
+    [
+      98,
+      7,
+      0,
+      52,
+      0,
+      "IMAGE"
+    ],
+    [
+      99,
+      6,
+      0,
+      52,
+      1,
+      "MASK"
+    ],
+    [
+      100,
+      52,
+      0,
+      53,
+      0,
+      "IMAGE"
+    ],
+    [
+      101,
+      50,
+      0,
+      53,
+      1,
+      "IMAGE"
+    ],
+    [
+      104,
+      50,
+      0,
+      54,
+      0,
+      "IMAGE"
+    ],
+    [
+      105,
+      48,
+      0,
+      54,
+      1,
+      "IMAGE"
+    ],
+    [
+      107,
+      7,
+      0,
+      55,
+      0,
+      "IMAGE"
+    ],
+    [
+      108,
+      6,
+      0,
+      55,
+      1,
+      "MASK"
+    ],
+    [
+      114,
+      6,
+      0,
+      36,
+      1,
+      "MASK"
+    ],
+    [
+      117,
+      52,
+      0,
+      58,
+      1,
+      "IMAGE"
+    ],
+    [
+      118,
+      7,
+      0,
+      58,
+      0,
+      "IMAGE"
+    ],
+    [
+      123,
+      7,
+      0,
+      60,
+      0,
+      "IMAGE"
+    ],
+    [
+      124,
+      6,
+      0,
+      60,
+      1,
+      "MASK"
+    ],
+    [
+      138,
+      52,
+      0,
+      67,
+      2,
+      "IMAGE"
+    ],
+    [
+      139,
+      7,
+      0,
+      67,
+      0,
+      "IMAGE"
+    ],
+    [
+      140,
+      6,
+      0,
+      67,
+      1,
+      "MASK"
+    ],
+    [
+      141,
+      67,
+      0,
+      68,
+      0,
+      "*"
+    ],
+    [
+      146,
+      7,
+      0,
+      71,
+      0,
+      "IMAGE"
+    ],
+    [
+      147,
+      6,
+      0,
+      71,
+      1,
+      "MASK"
+    ],
+    [
+      149,
+      71,
+      0,
+      72,
+      0,
+      "*"
+    ],
+    [
+      150,
+      7,
+      0,
+      73,
+      0,
+      "IMAGE"
+    ],
+    [
+      151,
+      6,
+      0,
+      73,
+      1,
+      "MASK"
+    ],
+    [
+      153,
+      73,
+      0,
+      74,
+      0,
+      "*"
+    ],
+    [
+      154,
+      7,
+      0,
+      75,
+      0,
+      "IMAGE"
+    ],
+    [
+      155,
+      6,
+      0,
+      75,
+      1,
+      "MASK"
+    ],
+    [
+      157,
+      75,
+      0,
+      76,
+      0,
+      "*"
+    ],
+    [
+      159,
+      48,
+      0,
+      71,
+      2,
+      "IMAGE"
+    ],
+    [
+      160,
+      46,
+      0,
+      73,
+      2,
+      "IMAGE"
+    ],
+    [
+      161,
+      36,
+      0,
+      75,
+      2,
+      "IMAGE"
+    ],
+    [
+      163,
+      80,
+      0,
+      79,
+      0,
+      "*"
+    ],
+    [
+      164,
+      7,
+      0,
+      80,
+      0,
+      "IMAGE"
+    ],
+    [
+      165,
+      6,
+      0,
+      80,
+      1,
+      "MASK"
+    ],
+    [
+      167,
+      60,
+      0,
+      80,
+      2,
+      "IMAGE"
+    ],
+    [
+      168,
+      36,
+      0,
+      81,
+      0,
+      "IMAGE"
+    ],
+    [
+      172,
+      84,
+      0,
+      83,
+      0,
+      "*"
+    ],
+    [
+      173,
+      7,
+      0,
+      84,
+      0,
+      "IMAGE"
+    ],
+    [
+      174,
+      6,
+      0,
+      84,
+      1,
+      "MASK"
+    ],
+    [
+      175,
+      50,
+      0,
+      84,
+      2,
+      "IMAGE"
+    ],
+    [
+      195,
+      7,
+      0,
+      95,
+      0,
+      "IMAGE"
+    ],
+    [
+      196,
+      6,
+      0,
+      95,
+      1,
+      "MASK"
+    ],
+    [
+      198,
+      95,
+      0,
+      96,
+      0,
+      "*"
+    ],
+    [
+      205,
+      7,
+      0,
+      95,
+      2,
+      "IMAGE"
+    ],
+    [
+      214,
+      50,
+      0,
+      100,
+      1,
+      "IMAGE"
+    ],
+    [
+      215,
+      7,
+      0,
+      100,
+      0,
+      "IMAGE"
+    ],
+    [
+      216,
+      52,
+      0,
+      105,
+      0,
+      "IMAGE"
+    ],
+    [
+      217,
+      50,
+      0,
+      106,
+      0,
+      "IMAGE"
+    ],
+    [
+      218,
+      48,
+      0,
+      107,
+      0,
+      "IMAGE"
+    ],
+    [
+      219,
+      46,
+      0,
+      108,
+      0,
+      "IMAGE"
+    ],
+    [
+      220,
+      36,
+      0,
+      109,
+      0,
+      "IMAGE"
+    ],
+    [
+      221,
+      60,
+      0,
+      110,
+      0,
+      "IMAGE"
+    ],
+    [
+      223,
+      7,
+      0,
+      113,
+      0,
+      "IMAGE"
+    ],
+    [
+      225,
+      7,
+      0,
+      114,
+      0,
+      "IMAGE"
+    ],
+    [
+      227,
+      7,
+      0,
+      115,
+      0,
+      "IMAGE"
+    ],
+    [
+      229,
+      7,
+      0,
+      116,
+      0,
+      "IMAGE"
+    ],
+    [
+      231,
+      48,
+      0,
+      113,
+      1,
+      "IMAGE"
+    ],
+    [
+      232,
+      46,
+      0,
+      114,
+      1,
+      "IMAGE"
+    ],
+    [
+      233,
+      36,
+      0,
+      115,
+      1,
+      "IMAGE"
+    ],
+    [
+      234,
+      60,
+      0,
+      116,
+      1,
+      "IMAGE"
+    ],
+    [
+      235,
+      55,
+      0,
+      117,
+      0,
+      "IMAGE"
+    ],
+    [
+      236,
+      48,
+      0,
+      10,
+      0,
+      "IMAGE"
+    ],
+    [
+      237,
+      46,
+      0,
+      10,
+      1,
+      "IMAGE"
+    ],
+    [
+      238,
+      46,
+      0,
+      65,
+      0,
+      "IMAGE"
+    ],
+    [
+      239,
+      36,
+      0,
+      65,
+      1,
+      "IMAGE"
+    ],
+    [
+      240,
+      36,
+      0,
+      57,
+      0,
+      "IMAGE"
+    ],
+    [
+      241,
+      60,
+      0,
+      57,
+      1,
+      "IMAGE"
+    ],
+    [
+      242,
+      7,
+      0,
+      118,
+      0,
+      "IMAGE"
+    ],
+    [
+      244,
+      55,
+      0,
+      118,
+      1,
+      "IMAGE"
+    ],
+    [
+      247,
+      60,
+      0,
+      119,
+      0,
+      "IMAGE"
+    ],
+    [
+      248,
+      55,
+      0,
+      119,
+      1,
+      "IMAGE"
+    ],
+    [
+      249,
+      7,
+      0,
+      120,
+      0,
+      "IMAGE"
+    ],
+    [
+      250,
+      6,
+      0,
+      120,
+      1,
+      "MASK"
+    ],
+    [
+      252,
+      120,
+      0,
+      121,
+      0,
+      "*"
+    ],
+    [
+      261,
+      55,
+      0,
+      120,
+      2,
+      "IMAGE"
+    ],
+    [
+      266,
+      60,
+      0,
+      33,
+      0,
+      "IMAGE"
+    ],
+    [
+      268,
+      55,
+      0,
+      61,
+      0,
+      "IMAGE"
+    ],
+    [
+      269,
+      39,
+      0,
+      127,
+      0,
+      "IMAGE"
+    ],
+    [
+      276,
+      132,
+      0,
+      130,
+      0,
+      "*"
+    ],
+    [
+      277,
+      7,
+      0,
+      131,
+      0,
+      "IMAGE"
+    ],
+    [
+      278,
+      6,
+      0,
+      131,
+      1,
+      "MASK"
+    ],
+    [
+      279,
+      7,
+      0,
+      132,
+      0,
+      "IMAGE"
+    ],
+    [
+      280,
+      6,
+      0,
+      132,
+      1,
+      "MASK"
+    ],
+    [
+      282,
+      7,
+      0,
+      133,
+      0,
+      "IMAGE"
+    ],
+    [
+      284,
+      131,
+      0,
+      134,
+      0,
+      "IMAGE"
+    ],
+    [
+      285,
+      131,
+      0,
+      135,
+      0,
+      "IMAGE"
+    ],
+    [
+      286,
+      50,
+      0,
+      135,
+      1,
+      "IMAGE"
+    ],
+    [
+      287,
+      131,
+      0,
+      136,
+      0,
+      "IMAGE"
+    ],
+    [
+      291,
+      139,
+      0,
+      138,
+      0,
+      "*"
+    ],
+    [
+      292,
+      7,
+      0,
+      139,
+      0,
+      "IMAGE"
+    ],
+    [
+      293,
+      6,
+      0,
+      139,
+      1,
+      "MASK"
+    ],
+    [
+      297,
+      7,
+      0,
+      142,
+      0,
+      "IMAGE"
+    ],
+    [
+      300,
+      50,
+      0,
+      143,
+      1,
+      "IMAGE"
+    ],
+    [
+      303,
+      131,
+      0,
+      132,
+      2,
+      "IMAGE"
+    ],
+    [
+      306,
+      131,
+      0,
+      133,
+      1,
+      "IMAGE"
+    ],
+    [
+      307,
+      7,
+      0,
+      147,
+      0,
+      "IMAGE"
+    ],
+    [
+      308,
+      6,
+      0,
+      147,
+      1,
+      "MASK"
+    ],
+    [
+      309,
+      147,
+      0,
+      140,
+      0,
+      "IMAGE"
+    ],
+    [
+      310,
+      147,
+      0,
+      141,
+      0,
+      "IMAGE"
+    ],
+    [
+      311,
+      147,
+      0,
+      143,
+      0,
+      "IMAGE"
+    ],
+    [
+      312,
+      147,
+      0,
+      139,
+      2,
+      "IMAGE"
+    ],
+    [
+      313,
+      147,
+      0,
+      142,
+      1,
+      "IMAGE"
+    ],
+    [
+      316,
+      161,
+      0,
+      159,
+      0,
+      "*"
+    ],
+    [
+      319,
+      6,
+      0,
+      161,
+      1,
+      "MASK"
+    ],
+    [
+      320,
+      7,
+      0,
+      162,
+      0,
+      "IMAGE"
+    ],
+    [
+      346,
+      7,
+      0,
+      181,
+      0,
+      "IMAGE"
+    ],
+    [
+      347,
+      6,
+      0,
+      181,
+      1,
+      "MASK"
+    ],
+    [
+      348,
+      181,
+      0,
+      160,
+      0,
+      "IMAGE"
+    ],
+    [
+      349,
+      181,
+      0,
+      161,
+      0,
+      "IMAGE"
+    ],
+    [
+      350,
+      181,
+      0,
+      162,
+      1,
+      "IMAGE"
+    ],
+    [
+      360,
+      186,
+      0,
+      182,
+      0,
+      "IMAGE"
+    ],
+    [
+      361,
+      186,
+      0,
+      183,
+      0,
+      "IMAGE"
+    ],
+    [
+      362,
+      6,
+      0,
+      183,
+      1,
+      "MASK"
+    ],
+    [
+      363,
+      183,
+      0,
+      184,
+      0,
+      "*"
+    ],
+    [
+      364,
+      7,
+      0,
+      185,
+      0,
+      "IMAGE"
+    ],
+    [
+      365,
+      186,
+      0,
+      185,
+      1,
+      "IMAGE"
+    ],
+    [
+      366,
+      7,
+      0,
+      186,
+      0,
+      "IMAGE"
+    ],
+    [
+      367,
+      6,
+      0,
+      186,
+      1,
+      "MASK"
+    ],
+    [
+      368,
+      191,
+      0,
+      187,
+      0,
+      "IMAGE"
+    ],
+    [
+      369,
+      191,
+      0,
+      188,
+      0,
+      "IMAGE"
+    ],
+    [
+      370,
+      6,
+      0,
+      188,
+      1,
+      "MASK"
+    ],
+    [
+      371,
+      188,
+      0,
+      189,
+      0,
+      "*"
+    ],
+    [
+      372,
+      7,
+      0,
+      190,
+      0,
+      "IMAGE"
+    ],
+    [
+      373,
+      191,
+      0,
+      190,
+      1,
+      "IMAGE"
+    ],
+    [
+      374,
+      7,
+      0,
+      191,
+      0,
+      "IMAGE"
+    ],
+    [
+      375,
+      6,
+      0,
+      191,
+      1,
+      "MASK"
+    ],
+    [
+      376,
+      196,
+      0,
+      192,
+      0,
+      "IMAGE"
+    ],
+    [
+      377,
+      196,
+      0,
+      193,
+      0,
+      "IMAGE"
+    ],
+    [
+      378,
+      6,
+      0,
+      193,
+      1,
+      "MASK"
+    ],
+    [
+      379,
+      193,
+      0,
+      194,
+      0,
+      "*"
+    ],
+    [
+      380,
+      7,
+      0,
+      195,
+      0,
+      "IMAGE"
+    ],
+    [
+      381,
+      196,
+      0,
+      195,
+      1,
+      "IMAGE"
+    ],
+    [
+      382,
+      7,
+      0,
+      196,
+      0,
+      "IMAGE"
+    ],
+    [
+      383,
+      6,
+      0,
+      196,
+      1,
+      "MASK"
+    ]
+  ],
+  "floatingLinks": [
+    {
+      "id": 5,
+      "origin_id": 5,
+      "origin_slot": 0,
+      "target_id": -1,
+      "target_slot": -1,
+      "type": "IMAGE",
+      "parentId": 1
+    }
+  ],
+  "groups": [
+    {
+      "id": 2,
+      "title": "Harmony Score",
+      "bounding": [
+        8839.134765625,
+        2384.286865234375,
+        604.491943359375,
+        3487.13427734375
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "flags": {}
+    },
+    {
+      "id": 3,
+      "title": "comparison with original",
+      "bounding": [
+        9460.9267578125,
+        2382.4599609375,
+        416.9862060546875,
+        3449.122802734375
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "flags": {}
+    },
+    {
+      "id": 4,
+      "title": "sub-comparison",
+      "bounding": [
+        9899.142578125,
+        2381.51806640625,
+        489.73638916015625,
+        3491.5263671875
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "flags": {}
+    },
+    {
+      "id": 5,
+      "title": "PCTNet CNN Blend Mode tests",
+      "bounding": [
+        8247.876953125,
+        646.1626586914062,
+        2176.875,
+        1682.586669921875
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "flags": {}
+    }
+  ],
+  "config": {},
+  "extra": {
+    "ue_links": [],
+    "ds": {
+      "scale": 0.2593742460100092,
+      "offset": [
+        -5312.398442024643,
+        -2744.102686316132
+      ]
+    },
+    "links_added_by_ue": [],
+    "reroutes": [
+      {
+        "id": 1,
+        "pos": [
+          7422.353515625,
+          5157.80712890625
+        ],
+        "linkIds": [],
+        "floating": {
+          "slotType": "output"
+        }
+      }
+    ],
+    "frontendVersion": "1.27.7",
+    "VHS_latentpreview": false,
+    "VHS_latentpreviewrate": 0,
+    "VHS_MetadataImage": true,
+    "VHS_KeepIntermediate": true,
+    "linkExtensions": []
+  },
+  "version": 0.4
+}
