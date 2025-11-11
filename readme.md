@@ -192,7 +192,7 @@ comfyui-libcom-image-composition/
 ---
 
 ## Credits
-
+- [bcmi/libcom](https://github.com/bcmi/libcom), Niu, Li and Cong, Wenyan and Liu, Liu and Hong, Yan and Zhang, Bo and Liang, Jing and Zhang, Liqing (2021) 
 - CDTNet: [Cong et al., CVPR 2022](https://github.com/bcmi/CDTNet-High-Resolution-Image-Harmonization)
 - PCT‑Net: [Guerreiro et al., CVPR 2023](https://openaccess.thecvf.com/content/CVPR2023/html/Guerreiro_PCT-Net_Full_Resolution_Image_Harmonization_Using_Pixel-Wise_Color_Transformations_CVPR_2023_paper.html)
 - Harmonizer: [https://github.com/ZHKKKe/Harmonizer](https://github.com/ZHKKKe/Harmonizer)
