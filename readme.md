@@ -87,6 +87,8 @@ cd python_embeded
 
 ## Usage
 
+![test all example](example_workflows/test_all_workflow.png)
+
 ### Image Harmonization (Multi‑Model)
 
 - Inputs:
